@@ -1,16 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/component/Header/Header";
+import Subtitle from "@/component/Subtitle/Subtitlle";
+import Link from "next/link";
+import CommonButton from "@/component/CommonBtn/CommonBtn";
 
-const geistSans = Geist({
+const interSans = Inter({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -23,7 +21,127 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <Header/>
+      <Header />
+      {/* ======Banner======= */}
+      <section className={styles.mainBanner}>
+        <div className="container">
+          <div className={styles.bannerContent}>
+            <Subtitle
+              text={"Unlock Limitless Possibilities in the Digital Era"}
+            />
+            <h1>
+              From strategy to execution, we fuel your journey with{" "}
+              <span> creativity, technology, and excellence.</span>
+            </h1>
+            <CommonButton text="Our Services" href="/services" />
+          </div>
+          <div className={styles.bannerImage}>
+            <img src={"/images/banner-image.png"} alt="banner image" />
+          </div>
+        </div>
+        <div className={styles.shape}>
+          <img src={"/images/bannerShape.png"} alt="shape" />
+        </div>
+      </section>
+
+      {/* ========Companies======= */}
+      <section className={styles.companies}>
+        <div className="container">
+          <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
+          <div className={styles.companyWrap}>
+            <ul>
+              <li>
+                <img src={"/images/segement.png"} alt="segemnt" />
+              </li>
+              <li>
+                <img src={"/images/asana.png"} alt="asana" />
+              </li>
+              <li>
+                <img src={"/images/intercom.png"} alt="intercom" />
+              </li>
+              <li>
+                <img src={"/images/zenefits.png"} alt="zenefits" />
+              </li>
+              <li>
+                <img src={"/images/greenhouse.png"} alt="greenhouse" />
+              </li>
+              <li>
+                <img src={"/images/chargebee.png"} alt="chargebee" />
+              </li>
+              <li>
+                <img src={"/images/lattice.png"} alt="lattice" />
+              </li>
+              <li>
+                <img src={"/images/frame.png"} alt="frame" />
+              </li>
+              <li>
+                <img src={"/images/mutiny.png"} alt="mutiny" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ======vision and mission====== */}
+      <section className={styles.visionMission}>
+        <div className="container">
+          <div className={`${styles.row} row`}>
+            <div className="col-lg-6">
+              <div className={styles.visionImage}>
+                <img src={"/images/vision.png"} alt="vision" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.visionContent}>
+                <Subtitle text={"Our Vison"} />
+                <p>
+                  To become a global leader in digital innovation by creating
+                  transformative solutions that empower businesses, inspire
+                  creativity, and shape a smarter, connected future.
+                </p>
+                <span className={styles.visionPoint}>Key vison point:</span>
+                <ul>
+                  <li>
+                    Empower Businesses → Driving sustainable growth and success
+                    through digital transformation.
+                  </li>
+                  <li>
+                    Inspire Creativity → Fostering innovation and imaginative
+                    solutions that make a difference.
+                  </li>
+                  <li>
+                    Shape a Smarter, Connected Future → Building
+                    technology-driven ecosystems that connect people, ideas, and
+                    opportunities globally.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className={`${styles.row} row`}>
+            <div className="col-lg-6">
+              <div className={styles.visionImage}>
+                <img src={"/images/mission.png"} alt="vision" />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.visionContent}>
+                <Subtitle text={"Our Mission"} />
+                <p>
+                  Our mission is to bridge technology and creativity to deliver
+                  impactful digital experiences. We are committed to driving
+                  growth through innovation, building trust through
+                  transparency, and creating long-lasting value for our clients
+                  by turning bold ideas into powerful realities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.missionShape}>
+          <img src={'/images/shape-2.png'} alt="shape" />
+        </div>
+      </section>
     </>
   );
 }
