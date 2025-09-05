@@ -153,11 +153,11 @@ const Header = () => {
                   </li>
                   <li
                     className={`${Styles.eachNav} ${
-                      router.pathname === "/industry" ? Styles.active : ""
+                      router.pathname === "/Portfolio" ? Styles.active : ""
                     }`}
                   >
-                    <Link href="/industry" className={Styles.eachNavMenu}>
-                      Industries
+                    <Link href="/Portfolio" className={Styles.eachNavMenu}>
+                      Portfolio
                     </Link>
                   </li>
 
@@ -166,19 +166,11 @@ const Header = () => {
                       router.pathname === "/blog" ? Styles.active : ""
                     }`}
                   >
-                    <Link href="/blog" className={Styles.eachNavMenu}>
-                      Insights & Resources
+                    <Link href="/Articles" className={Styles.eachNavMenu}>
+                      Articles
                     </Link>
                   </li>
-                  <li
-                    className={`${Styles.eachNav} ${
-                      router.pathname === "/contact" ? Styles.active : ""
-                    }`}
-                  >
-                    <Link href="/contact" className={Styles.eachNavMenu}>
-                      Contact
-                    </Link>
-                  </li>
+                 
                 </ul>
               </div>
             </div>

@@ -6,13 +6,25 @@ import Header from "@/component/Header/Header";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Link from "next/link";
 import CommonButton from "@/component/CommonBtn/CommonBtn";
-
+import Heading from "@/component/Heading/Heading";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import {
+  HiOutlineArrowSmLeft,
+  HiOutlineArrowSmRight,
+  HiStar,
+} from "react-icons/hi";
+import { useRef } from "react";
 const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 export default function Home() {
+  const swiperRef = useRef(null);
   return (
     <>
       <Head>
@@ -139,7 +151,261 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.missionShape}>
-          <img src={'/images/shape-2.png'} alt="shape" />
+          <img src={"/images/shape-2.png"} alt="shape" />
+        </div>
+      </section>
+
+      {/* =====popular services====== */}
+      <section className={styles.popularServices}>
+        <div className="container">
+          <div className={styles.topHeading}>
+            <Subtitle text={"Solutions That Drive Success"} />
+            <Heading mainText={"Popular"} highlightText={"Services"} />
+            <p>
+              Smart, innovative, and result-driven services built to grow your
+              business.
+            </p>
+          </div>
+          <div
+            className={styles.serviceWrap}
+            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+          >
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>Digital Marketing</Link>
+                </h5>
+                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>UI/UX Design</Link>
+                </h5>
+                <p>
+                  Designing intuitive, user-friendly, and visually stunning
+                  experiences that keep customers engaged and satisfied.
+                </p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>Graphic Design</Link>
+                </h5>
+                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>Web Design & Devlopment</Link>
+                </h5>
+                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>App Development </Link>
+                </h5>
+                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+            <div className={styles.eachService}>
+              <div className={styles.eachServiceContent}>
+                <h5>
+                  <Link href={"#"}>DevOps</Link>
+                </h5>
+                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+              </div>
+              <div className={styles.eachServiceImg}>
+                <img src={"/images/ui-ux.png"} alt="ui-ux" />
+              </div>
+              <div className={styles.arrowBtn}>
+                <Link href={"#"}>
+                  <img src={"/images/arrow.png"} alt="ui-ux" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======testimonial========= */}
+      <section className={styles.testimonial}>
+        <div className="container">
+          <div className={styles.topHeading}>
+            <Subtitle text={"Testimonial"} />
+            <Heading
+              mainText={"What our customer"}
+              highlightText={"says About Us"}
+            />
+          </div>
+          <div
+            className={styles.testimonialSlider}
+            style={{ backgroundImage: "url('/images/testiBg.png')" }}
+          >
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              pagination={false}
+              autoplay={{ delay: 3000 }}
+              loop={true}
+            >
+              <SwiperSlide>
+                <div className={styles.slideItem}>
+                  <p>
+                    We were invisible on Google before partnering with DIAMA
+                    Technologies. Within just three months, our website ranked
+                    on the first page for our primary keywords. Their SEO team
+                    knows exactly what they’re doing."
+                  </p>
+                  <ul>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                  </ul>
+                  <h4>Rajesh Mehra</h4>
+                  <span>Founder</span>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.slideItem}>
+                  <p>
+                    We were invisible on Google before partnering with DIAMA
+                    Technologies. Within just three months, our website ranked
+                    on the first page for our primary keywords. Their SEO team
+                    knows exactly what they’re doing."
+                  </p>
+                  <ul>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                  </ul>
+                  <h4>Rajesh Mehra</h4>
+                  <span>Founder</span>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.slideItem}>
+                  <p>
+                    We were invisible on Google before partnering with DIAMA
+                    Technologies. Within just three months, our website ranked
+                    on the first page for our primary keywords. Their SEO team
+                    knows exactly what they’re doing."
+                  </p>
+                  <ul>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                    <li>
+                      <HiStar />
+                    </li>
+                  </ul>
+                  <h4>Rajesh Mehra</h4>
+                  <span>Founder</span>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+            <div className={styles.navigationWrap}>
+              <button
+                onClick={() => {
+                  swiperRef.current.slidePrev();
+                  console.log("Prev button clicked");
+                }}
+                className={styles.customPrev}
+              >
+                <HiOutlineArrowSmLeft /> 
+              </button>
+              <button
+                onClick={() => {
+                  swiperRef.current.slideNext();
+                  console.log("Next button clicked");
+                }}
+                className={styles.customNext}
+              >
+                <HiOutlineArrowSmRight />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </>
