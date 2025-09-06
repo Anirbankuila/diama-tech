@@ -1,0 +1,100 @@
+.portfolioWrap {
+    margin-top: 50px;
+}
+
+.portfolioTab {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    border: 1px solid #373737;
+    background: #1F2020;
+    border-radius: 150px;
+    overflow-x: auto;
+    max-width: 870px;
+    margin: 0 auto 50px;
+    gap: 10px;
+    padding: 5px !important;
+}
+
+.portfolioTab li {
+    padding: 10px 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 150px;
+
+}
+
+.portfolioTab li.active {
+    background: #343434;
+    font-weight: 400;
+}
+
+.tabContent {
+    margin-top: 20px;
+}
+
+.customGrid {
+    display: flex;
+    gap: 30px;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imageItem {
+    overflow: hidden;
+    border: 2px solid #FFFFFFB2;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+
+.imageItem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.itemContent{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.itemContent h3{
+    font-size: 28px;
+    text-align: left;
+    color: #fff;
+    font-weight: 500;
+}
+.itemContent p{
+    font-size: 16px;
+    text-align: left;
+    color: #fff;
+    font-weight: 200;
+}
+.itemContent  a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D2D2D2;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+}
+.itemContent  a svg{
+    font-size: 24px;
+    color: #fff;
+    transform: rotateZ(-30deg);
+}

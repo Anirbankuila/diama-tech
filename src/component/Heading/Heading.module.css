@@ -5,7 +5,7 @@
 }
 
 .mainHeading span {
-  background: linear-gradient(90deg, #F7AF17 0%, #FFD758 100%);
+  background: linear-gradient(90deg, #E9B492 0%, #D7A882 48.08%, #FFCBBB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;

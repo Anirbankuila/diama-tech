@@ -1,0 +1,23 @@
+.counter {
+    justify-content: flex-end;
+    gap: 50px;
+    max-width: 610px;
+    display: flex;
+    margin-left: auto;
+}
+
+.counterItem {
+    text-align: left;
+}
+
+.counterItem h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.counterItem p {
+    font-size: 16px;
+    color: #C7C7C7;
+}
