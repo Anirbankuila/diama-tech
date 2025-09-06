@@ -40,7 +40,7 @@ export default function Home() {
       </Head>
       <Header />
       {/* ======Banner======= */}
-      <section className={styles.mainBanner}>
+      <section className={styles.mainBanner} style={{backgroundImage:"url(/images/bannerBg.png)"}}>
         <div className="container">
           <div className={styles.bannerContent}>
             <Subtitle

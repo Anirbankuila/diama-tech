@@ -1,0 +1,232 @@
+.mainBanner {
+  position: relative;
+  padding: 50px 0;
+}
+
+.bannerContent {
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bannerContent h1 {
+  font-size: 64px;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.bannerContent h1 span {
+  display: block;
+  font-weight: 600;
+  background: linear-gradient(90deg, #E9B492 0%, #D7A882 48.08%, #FFCBBB 100%);
+  -webkit-background-clip: text;
+  /* For Safari/Chrome */
+  -webkit-text-fill-color: transparent;
+  /* Make text transparent */
+  background-clip: text;
+  /* Standard */
+  color: transparent;
+  /* Fallback */
+}
+
+.bannerRightContent p {
+  text-align: right;
+  max-width: 500px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #c7c7c7;
+}
+
+.bannerImage img {
+  border-radius: 40px;
+  width: 100%;
+  display: block;
+}
+
+.shape {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+
+/* =========tech we use======== */
+.techWeUse {
+  position: relative;
+  padding: 60px 0;
+  background: #fff;
+  border-radius: 40px 40px 0 0;
+}
+
+.topHeader {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.topHeader h3 {
+  font-size: 80px;
+  line-height: 110px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.topHeader p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #000;
+}
+.techImg{
+  position: relative;
+}
+.techImg p{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.techImg img{
+  width: 100%;
+}
+/* ==========serviceSec=========== */
+.serviceSec{
+  position: relative;
+  padding: 80px 0 30px;
+}
+.serviceFirstShape{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.serviceFirstShape2{
+  position: absolute;
+  top: 23%;
+  right: 0;
+  z-index: -1;
+}
+.serviceFirstShape3{
+  position: absolute;
+  bottom:  18%;
+  left: -22%;
+  z-index: -1;
+}
+.serviceFirstShape4{
+  position: absolute;
+  bottom:  -3%;
+  left: 12%;
+  z-index: -1;
+}
+.serviceSec .topHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 80px;
+}
+.serviceSec .topHeader .serviceHeading{
+  max-width: 635px;
+}
+.serviceSec .topHeader p{
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-align: right;
+  opacity: 0.6;
+}
+
+.serviceContent h4{
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 400;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+.serviceContent p{
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFF;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+.serviceContent a{
+  color: #F8AD15;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.serviceContent a svg{
+  transform: rotateZ(-30deg);
+  font-size: 22px;
+}
+.serviceImg{
+  border-radius: 20px;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
+.serviceImg img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+.eachService:nth-child(odd) .serviceRow{
+  flex-direction: row-reverse;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* ======companies======== */
+.companies {
+  text-align: center;
+  position: relative;
+  padding: 30px 0 50px;
+}
+
+.companyWrap ul {
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ========buildTogether======== */
+.buildTogether{
+  position: relative;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.buildTogetherContent{
+  position: relative;
+}
+.buildTogether .buildTogetherHeading{
+  margin-bottom: 30px;
+}
+.buildTogether  p{
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+.buildshape{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
