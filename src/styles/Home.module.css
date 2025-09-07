@@ -18,7 +18,7 @@
 
 .bannerContent h1 span {
   font-weight: 600;
-  background: linear-gradient(90deg, #E9B492 0%, #D7A882 48.08%, #FFCBBB 100%);
+  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@
   display: block;
   margin-bottom: 10px;
   font-weight: 600;
-  background: linear-gradient(90deg, #E9B492 0%, #D7A882 48.08%, #FFCBBB 100%);
+  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -120,7 +120,6 @@
   /* Standard */
   color: transparent;
 }
-
 
 /* ========popularServices====== */
 .popularServices {
@@ -155,7 +154,7 @@
 .serviceWrap::before {
   position: absolute;
   content: "";
-  background-image: url('/images/serviceBg.jpg');
+  background-image: url("/images/serviceBg.jpg");
   width: 100%;
   height: 100%;
   top: 0;
@@ -175,11 +174,9 @@
   justify-content: space-between;
   padding: 40px 0;
   align-items: flex-start;
-  border-bottom: 1px solid #FFFFFF4D;
+  border-bottom: 1px solid #ffffff4d;
   cursor: pointer;
 }
-
-
 
 .eachServiceContent {
   max-width: 570px;
@@ -212,7 +209,6 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease-in-out;
-
 }
 
 .eachServiceImg img {
@@ -306,12 +302,12 @@
 
 .slideItem ul li {
   font-size: 20px;
-  color: #F5AF15;
+  color: #f5af15;
 }
 
 .slideItem h4 {
   font-size: 22px;
-  background: linear-gradient(90deg, #F7AF17 0%, #FFD758 100%);
+  background: linear-gradient(90deg, #f7af17 0%, #ffd758 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -406,65 +402,63 @@
   right: 0;
 }
 
-
 /* ======startProject======= */
-.startProject{
+.startProject {
   position: relative;
   padding: 90px 0 120px;
 }
-.projectshape1{
+.projectshape1 {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-.projectshape2{
+.projectshape2 {
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
-.projectWrap{
+.projectWrap {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.projectIcon{
+.projectIcon {
   position: absolute;
   left: -50px;
   top: 50%;
   transform: translateY(-50%);
 }
-.projectWrap .projectHeading{
+.projectWrap .projectHeading {
   font-size: 100px;
   line-height: 110px;
   font-weight: 200;
   max-width: 610px;
 }
-.projectWrap .projectHeading span{
+.projectWrap .projectHeading span {
   font-weight: 500;
 }
 
-
 /* ======portfolio======== */
-.portfolio{
+.portfolio {
   position: relative;
   text-align: center;
   padding: 30px 0 60px;
 }
-.serviceWrap .portfolioHeading{
+.serviceWrap .portfolioHeading {
   text-align: center;
   max-width: 1040px;
   margin: 0 auto;
 }
-.portfolioSubHeading{
+.portfolioSubHeading {
   text-align: center;
   margin: 0 auto;
 }
 
 /* ======contact======== */
-.contact{
+.contact {
   position: relative;
   padding: 90px 0 150px;
   background-size: cover;
@@ -474,7 +468,7 @@
 .contact::before {
   position: absolute;
   content: "";
-  background-image: url('/images/map.png');
+  background-image: url("/images/map.png");
   width: 100%;
   height: 100%;
   top: 0;
@@ -487,13 +481,13 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.contactLeft h5{
+.contactLeft h5 {
   font-size: 40px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 20px;
 }
-.contactLeft p{
+.contactLeft p {
   font-size: 20px;
   color: #c7c7c7;
   font-weight: 300;

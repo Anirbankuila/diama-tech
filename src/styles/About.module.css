@@ -1,0 +1,787 @@
+.section {
+  position: relative;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px; */
+}
+
+/* ===== Left Text ===== */
+.textBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 64px;
+  line-height: 1.3;
+  font-weight: 300;
+}
+
+.white {
+  color: #fff;
+}
+
+.orange {
+  font-weight: 600;
+  color: #ff914d;
+}
+
+.subBlock {
+  margin-top: 20px;
+}
+
+.subHeading {
+  font-size: 20px;
+  color: #ff914d;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.subText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #bbb;
+  max-width: 480px;
+}
+
+/* ===== Right Image + Circle ===== */
+.imageBlock {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+.mainImage {
+  width: 50%;
+  border-radius: 16px;
+  display: block;
+  top: -10px;
+}
+
+.circleWrapper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.circleSvg {
+  transform: rotate(-90deg);
+}
+
+.circleCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.3;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .circleWrapper {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin: 30px auto 0;
+  }
+}
+
+/* CSS Code - Solution */
+.solutionWrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 40px;
+  align-items: start;
+}
+
+.leftImage {
+  position: sticky;
+  top: 120px;
+}
+
+.leftImage img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.content {
+  padding: 20px 40px 20px 20px;
+}
+
+.content h2 {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 25px 0 40px 0;
+  color: #ffffff;
+  max-width: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+.content p {
+  color: #c7c7c7;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  text-align: justify;
+}
+
+.content p strong {
+  font-weight: 500;
+}
+
+.bottomTextPart {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 40px;
+  text-align: justify;
+}
+.rightImage {
+  align-items: center;
+  display: flex;
+}
+
+.rightImage img {
+  width: 95%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .solutionWrapper {
+    grid-template-columns: 350px 1fr 250px;
+    gap: 40px;
+    padding: 0 30px;
+  }
+
+  .content {
+    padding: 20px 30px 20px 15px;
+  }
+
+  .content h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 968px) {
+  .solutionWrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .content {
+    padding: 20px 0;
+    order: 1;
+  }
+
+  .leftImage {
+    position: static;
+    order: 2;
+  }
+
+  .rightImage {
+    position: static;
+    margin-top: 0;
+    order: 3;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+
+  .leftImage img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solutionSection {
+    padding: 80px 0;
+  }
+
+  .solutionWrapper {
+    padding: 0 20px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .leftImage img {
+    height: 350px;
+  }
+
+  .rightImage img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .leftImage img {
+    height: 300px;
+  }
+}
+
+/* CSS Code - stats section */
+.statsSection {
+  position: relative;
+  padding: 80px 0;
+  background-color: #0a0a0a;
+}
+
+.heroImage {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 599px;
+  object-fit: cover;
+  border-radius: 40px;
+  display: block;
+}
+
+.leftContent {
+  position: absolute;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  max-width: 300px;
+}
+
+.freeConsultation {
+  color: #ffa500;
+  font-size: 14px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.leftContent h2 {
+  font-size: 2.8rem;
+  font-weight: 200;
+  line-height: 1.1;
+  color: white;
+  margin: 0;
+}
+
+.mainSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 100px 0;
+  margin-top: 50px;
+}
+
+.column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: -50px;
+  z-index: 1;
+  padding: 0 50px;
+  min-height: 500px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+.column.highlighted {
+  z-index: 3;
+}
+
+/* Vertical divider lines between columns */
+.column:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #333;
+  z-index: 1;
+}
+
+.statCircle {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 80px;
+  background: #0a0a0a;
+  z-index: 2;
+}
+
+/* Highlighted circle with orange curved bottom */
+.column.highlighted .statCircle::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 60px;
+  border: 1px solid #ffa500;
+  border-top: none;
+  border-radius: 0 0 60px 60px;
+  background: #0a0a0a;
+}
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: #888;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.stageCard {
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  max-width: 220px;
+  margin-left: 80px;
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stageHeader h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+
+.stageDot {
+  width: 6px;
+  height: 6px;
+  background: #ffa500;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.stageCard p {
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.knowMoreBtn {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.knowMoreBtn:hover {
+  color: #ffa500;
+}
+
+.knowMoreBtn span {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.knowMoreBtn:hover span {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .leftContent {
+    left: 30px;
+    max-width: 250px;
+  }
+
+  .leftContent h2 {
+    font-size: 2.4rem;
+  }
+
+  .column {
+    margin-right: -40px;
+  }
+
+  .statCircle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .statNumber {
+    font-size: 3rem;
+  }
+
+  .stageCard {
+    max-width: 200px;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  .statsSection {
+    padding: 60px 0;
+  }
+
+  .leftContent {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 100%;
+  }
+
+  .leftContent h2 {
+    font-size: 2.5rem;
+  }
+
+  .mainSection {
+    padding: 60px 0;
+    margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    margin-right: -30px;
+    margin-bottom: 40px;
+  }
+
+  .column:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .statCircle {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 60px;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .stageCard {
+    margin-left: 30px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    margin-bottom: 60px;
+  }
+
+  .heroImage img {
+    border-radius: 20px;
+  }
+
+  .leftContent h2 {
+    font-size: 2rem;
+  }
+
+  .mainSection {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+
+  .column {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .column:last-child {
+    margin-bottom: 0;
+  }
+
+  .statCircle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+  }
+
+  .statNumber {
+    font-size: 2.2rem;
+  }
+
+  .stageCard {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .column.highlighted .statCircle::after {
+    width: 100px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsSection {
+    padding: 40px 0;
+  }
+
+  .leftContent h2 {
+    font-size: 1.8rem;
+  }
+
+  .statCircle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.9rem;
+  }
+
+  .column.highlighted .statCircle::after {
+    width: 80px;
+    height: 40px;
+  }
+}
+
+/* CSS for turing bold */
+/* Hero Section Styles */
+.heroSection {
+  color: #ffffff;
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Heading */
+.mainHeading {
+  font-size: 64px;
+  letter-spacing: 0.2;
+  font-weight: 200;
+  line-height: 110px;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.extraordinary {
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+
+  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ff7b54, #ff9a7b);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.ctaButton:hover::before {
+  left: 100%;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(255, 123, 84, 0.3);
+  background: linear-gradient(135deg, #ff8a63, #ffa382);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 80px 0;
+  }
+
+  .badge {
+    font-size: 13px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+  }
+
+  .mainHeading {
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .ctaButton {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
