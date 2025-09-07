@@ -50,9 +50,7 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div className={styles.shape}>
-          <img src={"/images/bannerShape.png"} alt="shape" />
-        </div>
+      
       </section>
 
       {/* ======technology====== */}
