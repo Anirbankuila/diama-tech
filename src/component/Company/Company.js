@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Subtitle from "../Subtitle/Subtitlle";
 import styles from "./Company.module.css";
 
