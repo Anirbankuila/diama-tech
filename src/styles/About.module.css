@@ -6,11 +6,6 @@
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px; */
 }
 
 /* ===== Left Text ===== */

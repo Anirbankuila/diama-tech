@@ -72,7 +72,7 @@ export default function ServicesSection() {
 
           {/* Card 7 */}
           <div className={styles.card}>
-            <img src="/images/devops.png" alt="DevOps" />
+            <img src="/images/devops1.png" alt="DevOps" />
             <div className={styles.cardOverlay}>
               <h3>DevOps</h3>
               <span>→</span>

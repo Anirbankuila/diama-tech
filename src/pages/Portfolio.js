@@ -2,6 +2,7 @@ import CommonButton from "@/component/CommonBtn/CommonBtn";
 import { Company } from "@/component/Company/Company";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
+import Heading from "@/component/Heading/Heading";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/Portfolio.module.css";
@@ -12,6 +13,33 @@ const interSans = Inter({
 });
 
 export default function Portfolio() {
+  const projects = [
+    {
+      id: 1,
+      title: "E-Commerce Website Design",
+      image: "/images/ecommerce.png",
+      url: "#",
+      description:
+        "We designed a modern, conversion-driven e-commerce platform that maximizes a seamless shopping experience.",
+    },
+    {
+      id: 2,
+      title: "Promptly – AI Chatbot App",
+      image: "/images/ai-chatbot.png",
+      url: "#",
+      description:
+        "A next-generation AI-powered chatbot solution designed to enhance productivity and engagement. The platform integrates intelligent features including real-time chat, secure file sharing, image generation, multilingual translation, and audio-based interaction.",
+    },
+    {
+      id: 3,
+      title: "Horoscope App – Personalized Astrology Experience",
+      image: "/images/weather-app.png",
+      url: "#",
+      description:
+        "A sleek, intuitive astrology app designed to deliver daily horoscopes, personalized birth chart insights, and compatibility analysis.",
+    },
+  ];
+
   return (
     <>
       <Header />
@@ -29,35 +57,60 @@ export default function Portfolio() {
             <CommonButton text="Start Your Project" href="/" />
           </div>
         </div>
+        <div className={styles.bottomLeftShape}>
+          <img
+            src="/images/portfolio-union-shape.png"
+            alt="portfolio-union-shape"
+          />
+        </div>
       </section>
-
       {/*Showcase Section */}
       <section className={styles.showcaseSection}>
         <div className="container">
-          <div className={styles.showcaseWrapper}>
-            {/* Project Preview */}
-            <img src={"/images/ecommerce.png"} alt="ecommerce" />
+          {projects.map((project) => (
+            <div key={project.id} className={styles.showcaseWrapper}>
+              {/* Project Preview */}
+              <img src={project.image} alt={project.title} />
 
-            {/* Project Info */}
-            <div className={styles.projectInfo}>
-              <div>
-                <h3 className={styles.projectTitle}>
-                  E-Commerce Website Design
-                </h3>
-                <p className={styles.projectDescription}>
-                  We designed a modern, conversion-driven e-commerce platform
-                  that maximizes a seamless shopping experience.
-                </p>
+              {/* Project Info */}
+              <div className={styles.projectInfo}>
+                <div>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <p className={styles.projectDescription}>
+                    {project.description}
+                  </p>
+                </div>
+                <a href={project.url} className={styles.viewCaseLink}>
+                  View Case Study <span className={styles.linkArrow}>→</span>
+                </a>
               </div>
-              <a href="#" className={styles.viewCaseLink}>
-                View Case Study <span className={styles.linkArrow}>→</span>
-              </a>
             </div>
-          </div>
+          ))}
         </div>
       </section>
       <Testimonial />
       <Company />
+      <section
+        className={styles.buildTogether}
+        style={{ backgroundImage: "url(/images/buildBg.png)" }}
+      >
+        <img
+          src={"/images/Union.png"}
+          alt="segemnt"
+          className={styles.buildshape}
+        />
+        <div className="container">
+          <div className={styles.buildTogetherContent}>
+            <Heading
+              mainText={"Ready To bring your "}
+              highlightText={"vision to life?"}
+              className={styles.buildTogetherHeading}
+            />
+
+            <CommonButton text={"Start Your Project"} />
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

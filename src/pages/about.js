@@ -19,7 +19,7 @@ export default function About() {
       {/* ====== About Us Section ====== */}
       <section
         className={styles.section}
-        style={{ backgroundImage: "url(/images/footerBg.png)" }}
+        style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className={styles.container}>
           {/* Left Text Content */}
@@ -102,8 +102,8 @@ export default function About() {
                 We are a team of passionate innovators, designers, and
                 developers dedicated to building digital experiences that make a
                 real difference. With creativity at our core and technology as
-                our tool, we help businesses grow, adapt, and thrive in today's
-                fast-changing digital world.
+                our tool, we help businesses grow, adapt, and thrive in
+                today&apos;s fast-changing digital world.
               </p>
               <div className={styles.bottomTextPart}>
                 <div className={styles.bottomTextLeftPart}>
@@ -141,7 +141,7 @@ export default function About() {
 
             {/* Main Heading */}
             <h1 className={styles.mainHeading}>
-              Have an Idea? Let's Build Something{" "}
+              Have an Idea? Let&apos;s Build Something{" "}
               <span className={styles.extraordinary}>Extraordinary!</span>
             </h1>
 

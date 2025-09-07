@@ -1,27 +1,17 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Service.module.css";
-import Header from "@/component/Header/Header";
-import Subtitle from "@/component/Subtitle/Subtitlle";
-import Link from "next/link";
 import CommonButton from "@/component/CommonBtn/CommonBtn";
+import Footer from "@/component/Footer/Footer";
+import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
+import Subtitle from "@/component/Subtitle/Subtitlle";
+import styles from "@/styles/Service.module.css";
+import { Inter } from "next/font/google";
+import Head from "next/head";
+import Link from "next/link";
+import { useRef } from "react";
+import { HiOutlineArrowSmRight } from "react-icons/hi";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import {
-  HiOutlineArrowSmLeft,
-  HiOutlineArrowSmRight,
-  HiStar,
-} from "react-icons/hi";
-import { useRef } from "react";
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
-import Portfolio from "@/component/Portfolio/Portfolio";
-import Footer from "@/component/Footer/Footer";
-import Counter from "@/component/Counter/Counter";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -317,7 +307,11 @@ export default function Service() {
         className={styles.buildTogether}
         style={{ backgroundImage: "url(/images/buildBg.png)" }}
       >
-        <img src={"/images/Union.png"} alt="segemnt" className={styles.buildshape} />
+        <img
+          src={"/images/Union.png"}
+          alt="segemnt"
+          className={styles.buildshape}
+        />
         <div className="container">
           <div className={styles.buildTogetherContent}>
             <Heading
