@@ -22,6 +22,10 @@ import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 import Portfolio from "@/component/Portfolio/Portfolio";
 import Footer from "@/component/Footer/Footer";
 import Counter from "@/component/Counter/Counter";
+import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { Form } from "react-bootstrap";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -39,6 +43,56 @@ export default function Service() {
     "Sport",
     "Business",
   ];
+  const blogData = [
+    {
+      img: "/images/article-1.png",
+      title: "Driving Business Growth Through Digital Inn...",
+      description:
+        "We help organizations embrace cutting-edge digital strategies, enabling them to scale faster, ad...",
+    },
+    {
+      img: "/images/article-2.png",
+      title: "Building Smarter Solutions for Tomorrow’s Enter...",
+      description:
+        "Our approach focuses on efficiency, productivity, and impact—designing solutions that simplify com...",
+    },
+    {
+      img: "/images/article-3.png",
+      title: "Transforming Bold Ideas Into Lasting Business Im...",
+      description:
+        "We bring concepts to life with practical execution, turning vision into tangible growth that fuels prog...",
+    },
+    {
+      img: "/images/article-4.png",
+      title: "Empowering Organizations With Future-Ready Tech...",
+      description:
+        "From scalable platforms to secure infrastructures, we design technology ecosystems that evolve w...",
+    },
+    {
+      img: "/images/article-5.png",
+      title: "Creating Strong Partnerships That Drive Innov...",
+      description:
+        "We believe collaboration unlocks potential—working closely with businesses to co-create sol...",
+    },
+    {
+      img: "/images/article-6.png",
+      title: "Redefining Excellence in Every Business Out...",
+      description:
+        "Our commitment to quality and precision ensures every project not only meets but exceeds indu...",
+    },
+  ];
+  const handlePrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slidePrev();
+    }
+  };
+
+  const handleNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.slideNext();
+    }
+  };
+
   return (
     <>
       <Head>
@@ -65,7 +119,7 @@ export default function Service() {
         </div>
       </section>
 
-      {/* ======technology====== */}
+      {/* ======blog list====== */}
       <section className={styles.portfolio}>
         <div className="container">
           <div
@@ -92,14 +146,271 @@ export default function Service() {
                     </li>
                   ))}
                 </ul>
-                 <div className={styles.blogTabContent}>
-                    
-                 </div>
+              </div>
+            </div>
+            <div className={styles.blogTabContent}>
+              {tabs.map((tab, index) => (
+                <div
+                  key={index}
+                  className={`${styles.tabPane} ${
+                    activeTab === index ? styles.show : styles.hide
+                  }`}
+                >
+                  <div className="row align-items-start">
+                    {/* Left Image Section */}
+                    <div className="col-lg-7 ">
+                      <div className={styles.blogImg}>
+                        <img
+                          src={`/images/blog-1.png`}
+                          alt={tab}
+                          className="img-fluid rounded"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Right Blog List */}
+                    <div className="col-lg-5">
+                      <div className={styles.blogList}>
+                        {[1, 2, 3, 4].map((item) => (
+                          <div key={item} className={styles.blogItem}>
+                            <h5>Lorem ipsum dolor sit amet</h5>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore
+                              et dolore magna aliqua...
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =======other blog======== */}
+      <section
+        className={styles.otherBlog}
+        style={{ backgroundImage: "url('/images/subscribeBg.png')" }}
+      >
+        <div className="container">
+          <div className={styles.blogHeading}>
+            <Heading mainText={"Other Blogs"} />
+            <p>Discover more stories you may find interesting.</p>
+          </div>
+          <div className="row">
+            <div className="col-lg-9">
+              <div className={styles.blogContent}>
+                <div className={styles.EachBlogContent}>
+                  <h5>Exploring Generative AI in Content Creation</h5>
+                  <p>
+                    Hello there! As a marketing manager in the SaaS industry,
+                    you might be looking for innovative ways to engage your
+                    audience. I bet generative AI has crossed your mind as an
+                    option for creating content. Well, let me share from my
+                    firsthand experience.
+                  </p>
+                  <p>
+                    Google encourages high-quality blogs regardless of whether
+                    they're written by humans or created using artificial
+                    intelligence like ChatGPT. Here's what matters: producing
+                    original material with expertise and trustworthiness based
+                    on Google E-E-A-T principles.
+                  </p>
+                  <p>
+                    This means focusing more on people-first writing rather than
+                    primarily employing AI tools to manipulate search rankings.
+                    There comes a time when many experienced professionals want
+                    to communicate their insights but get stuck due to limited
+                    writing skills – that’s where Generative AI can step in.
+                  </p>
+                  <p>
+                    So, together, we’re going explore how this technology could
+                    help us deliver valuable content without sounding robotic or
+                    defaulting into mere regurgitations of existing materials
+                    (spoiler alert – common pitfalls!). Hang tight - it’ll be a
+                    fun learning journey!
+                  </p>
+                </div>
+                <div className={styles.EachBlogContent}>
+                  <h5>Steering Clear of Common AI Writing Pitfalls</h5>
+                  <p>
+                    Jumping headfirst into using AI, like ChatGPT, without a
+                    content strategy can lead to some unfortunate results. One
+                    common pitfall I've seen is people opting for quantity over
+                    quality - they churn out blogs, but each one feels robotic
+                    and soulless, reading just like countless others on the
+                    internet.
+                  </p>
+                  <p>
+                    Another fault line lies in creating reproductions rather
+                    than delivering unique perspectives that offer value to
+                    readers; it often happens if you let an AI tool write your
+                    full blog unrestrained! Trust me on this – Ask any
+                    experienced marketer or writer about their takeaways from
+                    using generative AI tools. They'll all agree that adding a
+                    human touch and following specific guidelines are key when
+                    implementing these tech pieces.
+                  </p>
+                  <p>
+                    Remember, our goal here isn’t merely satisfying search
+                    engines but, more importantly, knowledge-hungry humans
+                    seeking reliable information online. So keep your audience's
+                    needs at heart while leveraging technology’s assistance!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className={styles.blogRightImg}>
+                <img
+                  src={`/images/blogImg.png`}
+                  alt={"tab"}
+                  className="img-fluid rounded"
+                />
+              </div>
+              <div className={styles.blogShare}>
+                <p>Share with your community!</p>
+                <ul>
+                  <li>
+                    <Link href={"#"}>
+                      <FaSquareFacebook />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"#"}>
+                      <FaSquareXTwitter />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={"#"}>
+                      {" "}
+                      <TbBrandLinkedinFilled />
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* =======Articles======= */}
+      <div className={`${styles.serviceWrap} ${styles.articleSec}`}>
+        <div className="container">
+          <div className={styles.articleTop}>
+            <h3>
+              Articles you may find helpful <br /> and inspiring.
+            </h3>
+            <div className={styles.customNav}>
+              <button
+                onClick={handlePrev}
+                className={`${styles.navBtn} ${styles.prevBtn}`}
+              >
+                <GoArrowLeft />
+              </button>
+              <button
+                onClick={handleNext}
+                className={`${styles.navBtn} ${styles.nextBtn}`}
+              >
+                <GoArrowRight />
+              </button>
+            </div>
+          </div>
+          <div className={styles.blogSliderSection}>
+            <Swiper
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
+              modules={[Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              autoplay={{ delay: 5000 }}
+            >
+              <SwiperSlide>
+                <div className={styles.blogGrid}>
+                  {blogData.map((blog, index) => (
+                    <div className={styles.blogBlock} key={index}>
+                      <img src={blog.img} alt={blog.title} />
+                      <h4>{blog.title}</h4>
+                      <p>{blog.description}</p>
+                      <Link href={"#"} className={styles.learnMore}>
+                        Learn more <GoArrowRight />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.blogGrid}>
+                  {blogData.map((blog, index) => (
+                    <div className={styles.blogBlock} key={index}>
+                      <img src={blog.img} alt={blog.title} />
+                      <h4>{blog.title}</h4>
+                      <p>{blog.description}</p>
+                      <Link href={"#"} className={styles.learnMore}>
+                        Learn more <GoArrowRight />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={styles.blogGrid}>
+                  {blogData.map((blog, index) => (
+                    <div className={styles.blogBlock} key={index}>
+                      <img src={blog.img} alt={blog.title} />
+                      <h4>{blog.title}</h4>
+                      <p>{blog.description}</p>
+                      <Link href={"#"} className={styles.learnMore}>
+                        Learn more <GoArrowRight />
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </SwiperSlide>
+
+              {/* Add more SwiperSlides if needed for additional sets */}
+            </Swiper>
+          </div>
+        </div>
+      </div>
+
+      {/* ======subscribe======= */}
+      <div
+        className={`${styles.subscribe}`}
+        style={{ backgroundImage: "url('/images/subscribeBg.png')" }}
+      >
+        <div className="container">
+          <div className={styles.subscribeWrap}>
+            <div className={styles.subscribeWrapImg}>
+              <img src={"/images/nask-group.png"} alt="subscribe img" />
+            </div>
+            <div className={styles.subscribeWrapContent}>
+              <Heading mainText={"Subscribe to our newsletter"} />
+              <p>
+                From the very first sketch to the final launch, our team at
+                Diama Technologies transforms bold ideas into powerful digital
+                experiences that connect, inspire, and deliver real results.
+              </p>
+              <Form className={styles.newsletterForm}>
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className={styles.emailInput}
+                />
+                <button type="submit" className={styles.subscribeBtn}>
+                  Subscribe
+                </button>
+              </Form>
+              <p>Your information will never be shard with third parties, and you can unsubscribe from our updates at any time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* ========Companies======= */}
       <section className={styles.companies}>
@@ -135,31 +446,6 @@ export default function Service() {
                 <img src={"/images/mutiny.png"} alt="mutiny" />
               </li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ========build====== */}
-      <section
-        className={styles.buildTogether}
-        style={{ backgroundImage: "url(/images/buildBg.png)" }}
-      >
-        <img
-          src={"/images/Union.png"}
-          alt="segemnt"
-          className={styles.buildshape}
-        />
-        <div className="container">
-          <div className={styles.buildTogetherContent}>
-            <Heading
-              mainText={"Let’s Build the Future Together"}
-              className={styles.buildTogetherHeading}
-            />
-            <p>
-              Ready to transform your ideas into reality? Let’s collaborate and
-              craft solutions that drive success.
-            </p>
-            <CommonButton text={"Let’s Work Together"} />
           </div>
         </div>
       </section>
