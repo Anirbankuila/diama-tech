@@ -7,6 +7,7 @@ import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/Portfolio.module.css";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -42,6 +43,9 @@ export default function Portfolio() {
 
   return (
     <>
+      <Head>
+        <title>Diama Technology</title>
+      </Head>
       <Header />
       <section
         className={styles.mainBanner}

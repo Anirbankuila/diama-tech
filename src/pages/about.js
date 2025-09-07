@@ -6,6 +6,7 @@ import ServicesSection from "@/component/ServicesSection/ServicesSection";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import styles from "@/styles/About.module.css";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -15,6 +16,9 @@ const interSans = Inter({
 export default function About() {
   return (
     <>
+      <Head>
+        <title>Diama Technology</title>
+      </Head>
       <Header />
       {/* ====== About Us Section ====== */}
       <section

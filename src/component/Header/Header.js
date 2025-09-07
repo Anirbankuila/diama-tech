@@ -1,21 +1,12 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router"; // Import useRouter
-import "bootstrap/dist/css/bootstrap.min.css";
-import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { CiGlobe } from "react-icons/ci";
-import Styles from "./Header.module.css";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
-import { GoArrowUpRight, GoChevronDown, GoChevronUp } from "react-icons/go";
-import { FiChevronRight } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Link from "next/link";
+import { useRouter } from "next/router"; // Import useRouter
+import { useEffect, useRef, useState } from "react";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import Styles from "./Header.module.css";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
@@ -170,12 +161,13 @@ const Header = () => {
                       Articles
                     </Link>
                   </li>
-                 
                 </ul>
               </div>
             </div>
             <div className={Styles.contactBtn}>
-              <Link href={"/"} className={Styles.cmnBtn}>Contact Us</Link>
+              <Link href={"/contact"} className={Styles.cmnBtn}>
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
