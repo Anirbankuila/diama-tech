@@ -182,12 +182,12 @@ export default function About() {
                   <div>Clients</div>
                 </div>
               </div>
-              <div className={styles.leftContent}>
+              {/* <div className={styles.leftContent}>
                 <p className={styles.freeConsultation}>
                   Free consultation for you
                 </p>
                 <h2>We are here to help any stage</h2>
-              </div>
+              </div> */}
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Early Stage</h4>
@@ -201,7 +201,7 @@ export default function About() {
             </div>
 
             {/* Column 2 - Highlighted */}
-            <div className={`${styles.column} ${styles.highlighted}`}>
+            <div className={`${styles.column}`}>
               <div className={styles.statCircle}>
                 <div className={styles.statNumber}>5K+</div>
                 <div className={styles.statLabel}>
