@@ -163,10 +163,10 @@ const Header = () => {
 
                   <li
                     className={`${Styles.eachNav} ${
-                      router.pathname === "/blog" ? Styles.active : ""
+                      router.pathname === "/articles" ? Styles.active : ""
                     }`}
                   >
-                    <Link href="/Articles" className={Styles.eachNavMenu}>
+                    <Link href="/articles" className={Styles.eachNavMenu}>
                       Articles
                     </Link>
                   </li>
