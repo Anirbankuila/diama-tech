@@ -195,7 +195,6 @@ export default function About() {
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Early Stage</h4>
-                  <div className={styles.stageDot}></div>
                 </div>
                 <p>Get to elevate your business with big-tech IT technology</p>
                 <button className={styles.knowMoreBtn}>
@@ -216,7 +215,6 @@ export default function About() {
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Growth Stage</h4>
-                  <div className={styles.stageDot}></div>
                 </div>
                 <p>
                   Get to elevate your business with top-notch IT technology and
@@ -240,7 +238,6 @@ export default function About() {
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Advance Stage</h4>
-                  <div className={styles.stageDot}></div>
                 </div>
                 <p>
                   Get to elevate your business with top-notch IT technology and
@@ -264,7 +261,6 @@ export default function About() {
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Final Stage</h4>
-                  <div className={styles.stageDot}></div>
                 </div>
                 <p>Get to elevate your business with top-notch</p>
                 <button className={styles.knowMoreBtn}>
