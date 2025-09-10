@@ -64,7 +64,7 @@ export default function Home() {
                 <CommonButton text="Our Services" href="/services" />
               </div>
               <div className={styles.bannerImage}>
-                <img src={"/images/banner-2.png"} alt="banner image" />
+                <img src={"/images/banner-image.png"} alt="banner image" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -77,7 +77,7 @@ export default function Home() {
                 <CommonButton text="Our Services" href="/services" />
               </div>
               <div className={styles.bannerImage}>
-                <img src={"/images/banner-image.png"} alt="banner image" />
+                <img src={"/images/Connect-the-Dots.jpg"} alt="banner image" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -102,7 +102,7 @@ export default function Home() {
         <div className={styles.shape}>
           <img src={"/images/bannerShape.png"} alt="shape" />
         </div>
-         <div className={styles.shape_two}>
+        <div className={styles.shape_two}>
           <img src={"/images/banner_icon.png"} alt="shape" />
         </div>
       </section>
@@ -577,6 +577,9 @@ export default function Home() {
         // style={{ backgroundImage: "url(/images/map.png)" }}
       >
         <div className="container">
+          <div className={styles.contactTopImage}>
+            <img src={"/images/contact-map.png"} alt="banner image" />
+          </div>
           <div className="row">
             <div className="col-lg-4">
               <div className={styles.contactLeft}>
@@ -589,6 +592,7 @@ export default function Home() {
               <Counter />
             </div>
           </div>
+          <p className={styles.creative}>From <img src={"/images/india.png"} alt="banner image" /> with <img src={"/images/love.png"} alt="banner image" /> and creativity.</p>
         </div>
       </section>
 

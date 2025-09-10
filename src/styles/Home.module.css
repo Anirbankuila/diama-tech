@@ -117,12 +117,14 @@
   position: absolute;
   top: -200px;
   right: 0;
+  z-index: -1;
 }
 
 .visionMissionShape_two {
   position: absolute;
   bottom: 0px;
   left: 100px;
+  z-index: -1;
 }
 
 .missionShape {
@@ -172,7 +174,7 @@
   display: block;
   margin-bottom: 10px;
   font-weight: 600;
-  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
+  background: linear-gradient(97.23deg, #FED658 0%, #F8B018 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -565,27 +567,14 @@
 /* ======contact======== */
 .contact {
   position: relative;
-  padding: 90px 0 150px;
+  padding: 40px 0 100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.contact::before {
-  position: absolute;
-  content: "";
-  background-image: url("/images/map.png");
+.contactTopImage img{
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.4;
-  mix-blend-mode: luminosity;
-  /* transform: rotate(-90deg); */
-  background-size: 90%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .contactLeft h5 {
@@ -600,4 +589,10 @@
   color: #c7c7c7;
   font-weight: 300;
   margin-bottom: 25px;
+}
+.creative{
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
 }

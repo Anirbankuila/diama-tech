@@ -18,7 +18,9 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-
+.serviceHeading span{
+  display: block;
+}
 .header h2 {
   font-size: 64px;
   font-weight: 300;
@@ -79,7 +81,7 @@
 }
 
 .centerCard {
-  background: #f0a377;
+  background: #FCCB45;
   color: #222;
   flex-direction: column;
   justify-content: center;

@@ -1,3 +1,4 @@
+import Heading from "../Heading/Heading";
 import styles from "../ServicesSection/ServicesSection.module.css";
 import Subtitle from "../Subtitle/Subtitlle";
 export default function ServicesSection() {
@@ -7,12 +8,8 @@ export default function ServicesSection() {
         <div className={styles.header}>
           <Subtitle text={"What We Do Best"} />
           {/* <button className={styles.subtitle}>What We Do Best</button> */}
-          <h2>
-            Turning ideas into impact with{" "}
-            <span className={styles.highlight}>
-              design, technology, and strategy.
-            </span>
-          </h2>
+          <Heading className={styles.serviceHeading} mainText={'Turning ideas into impact with'} highlightText={'design, technology, and strategy.'} />
+          
         </div>
 
         <div className={styles.grid}>
