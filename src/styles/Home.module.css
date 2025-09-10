@@ -1,6 +1,9 @@
 .mainBanner {
   position: relative;
   padding: 50px 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .bannerContent {
@@ -18,7 +21,7 @@
 
 .bannerContent h1 span {
   font-weight: 600;
-  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
+  background: linear-gradient(97.23deg, #FED658 0%, #F8B018 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -33,6 +36,8 @@
   border-radius: 40px;
   width: 100%;
   display: block;
+  height: 600px;
+  object-fit: cover;
 }
 
 .shape {
@@ -41,11 +46,33 @@
   right: 0;
 }
 
+.shape_two {
+  position: absolute;
+  top: 28%;
+  left: 35%;
+}
+
+.shape_two img {
+  width: 100%;
+  height: 100%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ======companies======== */
 .companies {
   text-align: center;
   position: relative;
-  padding: 30px 0;
+  padding: 30px 0 60px;
 }
 
 .companyWrap ul {
@@ -58,10 +85,44 @@
   margin: 0 auto;
 }
 
+.clientShape {
+  position: absolute;
+  bottom: 0;
+  left: 110px;
+}
+
+.clientShape img {
+  width: 100%;
+  height: 100%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* ======visionMission====== */
 .visionMission {
   position: relative;
-  padding: 60px 0 90px;
+  padding: 60px 0 110px;
+}
+
+.visionMissionShape_one {
+  position: absolute;
+  top: -200px;
+  right: 0;
+}
+
+.visionMissionShape_two {
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
 }
 
 .missionShape {
@@ -81,7 +142,7 @@
 
 .visionMission .row:nth-child(even) {
   flex-direction: row-reverse;
-  margin-top: 80px;
+  margin-top: 110px;
 }
 
 .visionImage img {
@@ -125,6 +186,28 @@
 .popularServices {
   position: relative;
   padding: 30px 0 60px;
+}
+
+.service_shape {
+  position: absolute;
+  top: 10%;
+  left: 28%;
+}
+
+.service_shape img {
+  width: 100%;
+  height: 100%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .topHeading {
@@ -407,36 +490,56 @@
   position: relative;
   padding: 90px 0 120px;
 }
+
 .projectshape1 {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
+
 .projectshape2 {
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
 }
+
 .projectWrap {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .projectIcon {
   position: absolute;
+  width: 70px;
   left: -50px;
   top: 50%;
   transform: translateY(-50%);
+  animation: moveRocket 2s ease-in-out infinite alternate;
+
 }
+
+@keyframes moveRocket {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(20px);
+    /* সামনে কতটা যাবে সেটি এখানে নির্ধারণ করুন */
+  }
+}
+
 .projectWrap .projectHeading {
   font-size: 100px;
   line-height: 110px;
   font-weight: 200;
   max-width: 610px;
 }
+
 .projectWrap .projectHeading span {
   font-weight: 500;
 }
@@ -447,11 +550,13 @@
   text-align: center;
   padding: 30px 0 60px;
 }
+
 .serviceWrap .portfolioHeading {
   text-align: center;
   max-width: 1040px;
   margin: 0 auto;
 }
+
 .portfolioSubHeading {
   text-align: center;
   margin: 0 auto;
@@ -465,6 +570,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .contact::before {
   position: absolute;
   content: "";
@@ -481,12 +587,14 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .contactLeft h5 {
   font-size: 40px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 20px;
 }
+
 .contactLeft p {
   font-size: 20px;
   color: #c7c7c7;

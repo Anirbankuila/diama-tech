@@ -88,7 +88,7 @@
   /* background-color: var(--btn-color); */
   /* background: linear-gradient(219deg, #0096cf 0%, #052441 100%); */
   border-radius: 70px;
-  background: linear-gradient(97.23deg, #E7B393 0%, #DEA47D 48.56%, #F9D0CA 100%);
+  background: linear-gradient(97.23deg, #FED658 0%, #F8B018 100%);
   color: #000;
   text-decoration: none;
   position: relative;
@@ -110,7 +110,7 @@
   top: 0px;
   z-index: -1;
   transition: all 500ms ease;
-  background: linear-gradient(219deg, #052441 0%, #0096cf 100%);
+  background: linear-gradient(97.23deg, #F8B018 0%, #FED658 100%);
 }
 .cmnBtn:hover:before {
   width: 100%;

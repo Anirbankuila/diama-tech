@@ -44,27 +44,74 @@ export default function Home() {
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
-          <div className={styles.bannerContent}>
-            <Subtitle
-              text={"Unlock Limitless Possibilities in the Digital Era"}
-            />
-            <h1>
-              From strategy to execution, we fuel your journey with{" "}
-              <span> creativity, technology, and excellence.</span>
-            </h1>
-            <CommonButton text="Our Services" href="/services" />
-          </div>
-          <div className={styles.bannerImage}>
-            <img src={"/images/banner-image.png"} alt="banner image" />
-          </div>
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={false}
+            autoplay={{ delay: 3000 }}
+            loop={true}
+          >
+            <SwiperSlide>
+              <div className={styles.bannerContent}>
+                <Subtitle
+                  text={"Unlock Limitless Possibilities in the Digital Era"}
+                />
+                <h1>
+                  From strategy to execution, we fuel your journey with{" "}
+                  <span> creativity, technology, and excellence.</span>
+                </h1>
+                <CommonButton text="Our Services" href="/services" />
+              </div>
+              <div className={styles.bannerImage}>
+                <img src={"/images/banner-2.png"} alt="banner image" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.bannerContent}>
+                <Subtitle text={"We Connect The Digital Dots"} />
+                <h1>
+                  Your digital journey from utopia to eutopia
+                  <span> utopia to eutopia</span>
+                </h1>
+                <CommonButton text="Our Services" href="/services" />
+              </div>
+              <div className={styles.bannerImage}>
+                <img src={"/images/banner-image.png"} alt="banner image" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.bannerContent}>
+                <Subtitle
+                  text={
+                    "We understand your goals and help you scale your business sustainably and financially."
+                  }
+                />
+                <h1>
+                  We are a digital startup for
+                  <span> Startups and SMBs</span>
+                </h1>
+                <CommonButton text="Our Services" href="/services" />
+              </div>
+              <div className={styles.bannerImage}>
+                <img src={"/images/banner-3.png"} alt="banner image" />
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
         <div className={styles.shape}>
           <img src={"/images/bannerShape.png"} alt="shape" />
+        </div>
+         <div className={styles.shape_two}>
+          <img src={"/images/banner_icon.png"} alt="shape" />
         </div>
       </section>
 
       {/* ========Companies======= */}
       <section className={styles.companies}>
+        <div className={styles.clientShape}>
+          <img src={"/images/client_shape.png"} alt="shape" />
+        </div>
         <div className="container">
           <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
           <div className={styles.companyWrap}>
@@ -103,6 +150,12 @@ export default function Home() {
 
       {/* ======vision and mission====== */}
       <section className={styles.visionMission}>
+        <div className={styles.visionMissionShape_one}>
+          <img src={"/images/v_shape_one.png"} alt="shape" />
+        </div>
+        <div className={styles.visionMissionShape_two}>
+          <img src={"/images/v_shape_two.png"} alt="shape" />
+        </div>
         <div className="container">
           <div className={`${styles.row} row`}>
             <div className="col-lg-6">
@@ -164,6 +217,9 @@ export default function Home() {
 
       {/* =====popular services====== */}
       <section className={styles.popularServices}>
+        <div className={styles.service_shape}>
+          <img src={"/images/banner_icon.png"} alt="shape" />
+        </div>
         <div className="container">
           <div className={styles.topHeading}>
             <Subtitle text={"Solutions That Drive Success"} />
