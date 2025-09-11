@@ -8,6 +8,7 @@ import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/Portfolio.module.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { FiArrowRight } from "react-icons/fi";
 const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -85,7 +86,7 @@ export default function Portfolio() {
                   </p>
                 </div>
                 <a href={project.url} className={styles.viewCaseLink}>
-                  View Case Study <span className={styles.linkArrow}>→</span>
+                  View Case Study <span className={styles.linkArrow}><FiArrowRight /></span>
                 </a>
               </div>
             </div>

@@ -22,7 +22,7 @@
 .bannerContent h1 span {
   display: inline;
   font-weight: 600;
-  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
+  background: linear-gradient(97.23deg, #FED658 0%, #F8B018 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -111,9 +111,26 @@
   border: none;
   border-radius: 20px;
 }
-.inputGrid textarea {
-  height: 350px;
+.inputGroup .textarea:focus,
+.inputGrid input:focus{
+  outline: 1px solid #f5b895;
+}
+.inputGroup label{
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+.inputGroup .textarea {
+  height: 240px;
   resize: none;
+  width: 100%;
+  padding: 14px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
 }
 
 .checkboxLabel {
@@ -124,7 +141,9 @@
   font-size: 0.9rem;
   color: #ddd;
 }
-
+.formWrapperHeading{
+  margin-bottom: 50px;
+}
 .checkboxLabel a {
   color: #3a86ff;
   text-decoration: underline;
@@ -136,16 +155,18 @@
   flex-direction: column;
   align-items: center;
 }
-
+.contactImage{
+  width: 100%;
+}
 .contactImage img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   border-radius: 40px;
 }
 
 .contactDetails {
   margin-top: 20px;
-  width: 90%;
+  width: 100%;
   background: #1f1f1f;
   border-radius: 40px;
   padding: 10px;
@@ -160,19 +181,32 @@
   margin: 0 auto;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   background: #333;
-  height: 127px;
+  padding: 25px;
   border-radius: 40px;
   align-items: center;
   padding-inline: 20px;
 }
+
 .textWrapper {
-  padding-top: 0.7rem;
   align-items: center;
 }
-.contactItem p {
-  color: #ddd;
+
+.textWrapper span {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
 }
+
+.contactItem p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  margin: 0;
+}
+
 .iconWrapper {
   width: 60px;
   height: 60px;
@@ -183,10 +217,12 @@
   justify-content: center;
   margin-right: 1rem;
 }
+
 .iconWrapper img {
   width: 36px;
   height: 36px;
 }
+
 /* for come say hello */
 .locationSection {
   padding: 80px 0;
@@ -222,6 +258,9 @@
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
+.locationHeading span{
+  display: block;
+}
 /* ========buildTogether======== */
 .buildTogether {
   position: relative;
@@ -231,15 +270,21 @@
   background-repeat: no-repeat;
   text-align: center;
 }
+
 .buildTogetherContent {
   position: relative;
-  max-width: 800px;
+  text-align: center;
   margin: 0 auto;
 }
+
 .buildTogether .buildTogetherHeading {
   margin-bottom: 30px;
-  font-size: 70px;
+  font-size: 100px;
   font-weight: 200;
+}
+.buildTogether .buildTogetherHeading span{
+  display: block;
+  font-weight: 500;
 }
 .buildTogether p {
   font-size: 16px;
@@ -247,6 +292,7 @@
   margin-bottom: 40px;
   opacity: 0.8;
 }
+
 .buildshape {
   position: absolute;
   top: 10%;

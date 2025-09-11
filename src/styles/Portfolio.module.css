@@ -1,6 +1,9 @@
 .mainBanner {
   position: relative;
-  padding: 50px 0;
+  padding: 70px 0 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bannerContent {
@@ -23,7 +26,7 @@
 .bannerContent h1 span {
   display: inline;
   font-weight: 600;
-  background: linear-gradient(90deg, #e9b492 0%, #d7a882 48.08%, #ffcbbb 100%);
+  background: linear-gradient(97.23deg, #FED658 0%, #F8B018 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -50,11 +53,6 @@
   pointer-events: none;
 }
 
-.bottomLeftShape img {
-  width: 171px;
-  height: 171px;
-  display: block;
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -68,38 +66,37 @@
     width: 120px;
   }
 }
+
 /* Showcase Section */
 .showcaseSection {
-  padding: 50px 0;
+  padding: 0 0 50px 0;
   color: #ffffff;
 }
 
 .showcaseWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
   margin: 0 auto;
   margin-bottom: 20px;
+  width: 90%;
 }
 
 /* Image Styling */
 .showcaseWrapper img {
-  width: 90%;
+  width: 100%;
   height: 588px;
   border-radius: 40px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  transform: translateY(-5px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 /* Project Info */
 .projectInfo {
-  padding-left: 6%;
   display: grid;
   grid-template-columns: 65% 35%;
-  gap: 160px;
+  width: 100%;
 }
 
 .projectTitle {
@@ -111,36 +108,34 @@
 }
 
 .projectDescription {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 23px;
   font-weight: 400;
   color: #ffffff;
+  opacity: 0.6;
   margin-bottom: 24px;
   text-align: justify;
 }
 
 .viewCaseLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #d4a574;
-  font-size: 15px;
-  font-weight: 600;
+  color: #F8AD15;
+  font-size: 18px;
+  font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
-}
-.linkArrow {
-  font-size: 16px;
-  transition: transform 0.3s ease;
+  text-decoration: underline;
+  text-align: right;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.linkArrow {
+  font-size: 20px;
+  display: inline-flex;
+  transition: transform 0.4s ease;
+  transform: rotate(-30deg);
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -186,6 +181,7 @@
     border-radius: 10px;
   }
 }
+
 /* ========buildTogether======== */
 .buildTogether {
   position: relative;
@@ -195,22 +191,26 @@
   background-repeat: no-repeat;
   text-align: center;
 }
+
 .buildTogetherContent {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
 }
+
 .buildTogether .buildTogetherHeading {
   margin-bottom: 30px;
   font-size: 70px;
   font-weight: 200;
 }
+
 .buildTogether p {
   font-size: 16px;
   color: #fff;
   margin-bottom: 40px;
   opacity: 0.8;
 }
+
 .buildshape {
   position: absolute;
   top: 10%;

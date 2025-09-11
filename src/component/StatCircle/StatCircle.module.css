@@ -1,0 +1,53 @@
+.statCircle {
+  width: 355px;
+  height: 355px;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 80px;
+  z-index: 2;
+}
+
+/* Highlighted circle with orange curved bottom */
+.column.highlighted .statCircle::after {
+  content: "";
+  background-image: url(/images/ellipse.png);
+  background-repeat: no-repeat;
+  background-size: 271px;
+  width: 338px;
+  height: 84px;
+  position: absolute;
+  bottom: -20px;
+  left: 60%;
+  transform: translateX(-50%);
+}
+
+.statNumber {
+  font-size: 80px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.4;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 25px;
+  color: #fff;
+  opacity: 0.5;
+  line-height: 35px;
+  text-align: center;
+}
+
+.stageCard {
+  background: transparent;
+  padding: 0 0 20px;
+  text-align: center;
+  width: 100%;
+
+}

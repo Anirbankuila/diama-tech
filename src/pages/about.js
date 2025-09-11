@@ -4,6 +4,7 @@ import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
 import ServicesSection from "@/component/ServicesSection/ServicesSection";
+import StatCircle from "@/component/StatCircle/StatCircle";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import styles from "@/styles/About.module.css";
 import { Inter } from "next/font/google";
@@ -29,7 +30,7 @@ export default function About() {
         className={styles.section}
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
-        <div className={styles.container}>
+        <div className="container">
           {/* Left Text Content */}
           <div className={styles.textBlock}>
             <div className={styles.leftItem}>
@@ -100,8 +101,10 @@ export default function About() {
             {/* Middle Content */}
             <div className={styles.content}>
               <Subtitle text={"Not Just a Company, A Mindset"} />
-              <Heading mainText={'Turning imagination into'} highlightText={'powerful solutions.'}/>
-             
+              <Heading
+                mainText={"Turning imagination into"}
+                highlightText={"powerful solutions."}
+              />
 
               <p>
                 We are a team of passionate innovators, designers, and
@@ -138,55 +141,21 @@ export default function About() {
       </section>
       <Company />
       <ServicesSection />
-      <section className={styles.heroSection}>
-        <div className="container">
-          <div className={styles.heroContent}>
-            {/* Top Badge */}
-            <Subtitle text={"Turning Bold Ideas into Digital Landmark"} />
 
-            {/* Main Heading */}
-            <h1 className={styles.mainHeading}>
-              Have an Idea? Let&apos;s Build Something{" "}
-              <span className={styles.extraordinary}>Extraordinary!</span>
-            </h1>
-
-            {/* Description */}
-            <p className={styles.description}>
-              From the very first sketch to the final launch, our team at Diama
-              Technologies transforms bold ideas into powerful digital
-              experiences that connect, inspire, and deliver real results.
-            </p>
-
-            <CommonButton text={"Get Started Today"} href="" />
-            {/* CTA Button */}
-            {/* <button className={styles.ctaButton}>
-              Get Started Today
-              <span className={styles.arrow}>↗</span>
-            </button> */}
-          </div>
-        </div>
-      </section>
       {/* ====== Solution Section For Stats====== */}
       <section className={styles.statsSection}>
         <div className="container">
-          {/* Top Image */}
-          <div className={styles.heroImage}>
-            <img src="/images/team-meeting.png" alt="Team Meeting" />
-          </div>
-
-          {/* Left Content */}
-
           {/* Main Section with 4 Overlapping Columns */}
           <div className={styles.mainSection}>
             {/* Column 1 */}
             <div className={styles.column}>
-              <div className={styles.statCircle}>
-                <div className={styles.statNumber}>100+</div>
-                <div className={styles.statLabel}>
-                  <div>Satisfied</div>
-                  <div>Clients</div>
-                </div>
-              </div>
+              {/* <div className={styles.statNumber}>100+</div> */}
+              <StatCircle
+                endValue={100}
+                suffix="+"
+                lines={["Satisfied", "Clients"]}
+              />
+
               <div className={styles.leftContent}>
                 <p className={styles.freeConsultation}>
                   Free consultation for you
@@ -206,13 +175,12 @@ export default function About() {
 
             {/* Column 2 - Highlighted */}
             <div className={`${styles.column}`}>
-              <div className={styles.statCircle}>
-                <div className={styles.statNumber}>5K+</div>
-                <div className={styles.statLabel}>
-                  <div>Successful</div>
-                  <div>Projects Delivered</div>
-                </div>
-              </div>
+              <StatCircle
+                endValue={5000}
+                suffix="+"
+                lines={["Successful", "Projects Delivered"]}
+              />
+
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Growth Stage</h4>
@@ -229,13 +197,7 @@ export default function About() {
 
             {/* Column 3 */}
             <div className={styles.column}>
-              <div className={styles.statCircle}>
-                <div className={styles.statNumber}>10+</div>
-                <div className={styles.statLabel}>
-                  <div>Ongoing</div>
-                  <div>Projects</div>
-                </div>
-              </div>
+              <StatCircle endValue={10} suffix="+" lines={['Ongoing', 'Projects']} />
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Advance Stage</h4>
@@ -252,13 +214,7 @@ export default function About() {
 
             {/* Column 4 */}
             <div className={styles.column}>
-              <div className={styles.statCircle}>
-                <div className={styles.statNumber}>2</div>
-                <div className={styles.statLabel}>
-                  <div>Awards</div>
-                  <div>achievement</div>
-                </div>
-              </div>
+              <StatCircle endValue={2} suffix="" lines={['Awards', 'achievement']} />
               <div className={styles.stageCard}>
                 <div className={styles.stageHeader}>
                   <h4>Final Stage</h4>

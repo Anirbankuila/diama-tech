@@ -39,37 +39,47 @@ export default function contact() {
           <div className={styles.contactContent}>
             {/* Left: Form */}
             <div className={styles.formWrapper}>
-              <h2>Let’s chat, Reach Out to Us</h2>
-              <p>
-                Have question or feedback? We&apos;re here to help, send us a
-                message, and we&apos;ll respond within 24 hours.
-              </p>
-
-              <div className={styles.inputGrid}>
-                <input type="text" placeholder="First name" />
-                <input type="text" placeholder="Last name" />
-                <input type="email" placeholder="Email address" />
-                <input type="tel" placeholder="Phone number" />
+              <div className={styles.formWrapperHeading}>
+                <h2>Let’s chat, Reach Out to Us</h2>
+                <p>
+                  Have question or feedback? We&apos;re here to help, send us a
+                  message, and we&apos;ll respond within 24 hours.
+                </p>
               </div>
+              <form>
+                <div className={styles.inputGrid}>
+                  <div className={styles.inputGroup}>
+                    <label>First Name</label>
+                    <input type="text" placeholder="First name" />
+                  </div>
+                  <div className={styles.inputGroup}>
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last name" />
+                  </div>
+                  <div className={styles.inputGroup}>
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Email address" />
+                  </div>
+                  <div className={styles.inputGroup}>
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Phone number" />
+                  </div>
+                </div>
+                <div className={styles.inputGroup}>
+                  <label>Message</label>
+                  <textarea
+                    placeholder="Leave us message..."
+                    className={styles.textarea}
+                  />
+                </div>
 
-              <textarea
-                placeholder="Leave us message..."
-                className="textarea"
-                style={{
-                  height: "275px",
-                  width: "100%",
-                  borderRadius: "20px",
-                  padding: "10px",
-                  marginBottom: "2rem",
-                }}
-              ></textarea>
+                <label className={styles.checkboxLabel}>
+                  <input type="checkbox" />I agree to our friendly{" "}
+                  <a href="#">privacy policy</a>
+                </label>
 
-              <label className={styles.checkboxLabel}>
-                <input type="checkbox" />I agree to our friendly{" "}
-                <a href="#">privacy policy</a>
-              </label>
-
-              <CommonButton text="Send message" href="#" />
+                <CommonButton text="Send message" href="#" />
+              </form>
             </div>
 
             {/* Right: Image + Contact Info */}
@@ -129,10 +139,7 @@ export default function contact() {
         <div className="container">
           <div className={styles.sectionHeader}>
             <Subtitle text={"Come say hello!"} />
-            <h2>
-              Step into our world <br />
-              <span>discover our location.</span>
-            </h2>
+            <Heading className={styles.locationHeading} mainText={"Step into our world"} highlightText={'discover our location.'} />
           </div>
 
           <div className={styles.mapWrapper}>
