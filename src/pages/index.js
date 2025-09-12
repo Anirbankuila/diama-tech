@@ -168,8 +168,8 @@ export default function Home() {
                 <Subtitle text={"Our Vison"} />
                 <p>
                   To empower businesses worldwide with innovative digital solutions that drive growth, fuel
-creativity, and create meaningful connections—helping them succeed today and shape a
-smarter, more connected tomorrow.
+                  creativity, and create meaningful connections—helping them succeed today and shape a
+                  smarter, more connected tomorrow.
                 </p>
                 <span className={styles.visionPoint}>Key vison point:</span>
                 <ul>
@@ -231,7 +231,7 @@ smarter, more connected tomorrow.
           </div>
           <div
             className={styles.serviceWrap}
-            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+          // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
           >
             <div className={styles.eachService}>
               <div className={styles.eachServiceContent}>
@@ -239,7 +239,7 @@ smarter, more connected tomorrow.
                   <Link href={"#"}>Digital Marketing</Link>
                 </h5>
                 <p>Crafting data-driven, creative marketing strategies that connect businesses with their audience,
-boost visibility, and drive sustainable growth.</p>
+                  boost visibility, and drive sustainable growth.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -275,7 +275,7 @@ boost visibility, and drive sustainable growth.</p>
                   <Link href={"#"}>Graphic Design</Link>
                 </h5>
                 <p>Creating impactful and aesthetically engaging designs that communicate your brand’s message
-clearly and leave a lasting impression.</p>
+                  clearly and leave a lasting impression.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -292,7 +292,7 @@ clearly and leave a lasting impression.</p>
                   <Link href={"#"}>Web Design & Devlopment</Link>
                 </h5>
                 <p>Building responsive, fast, and visually appealing websites that offer seamless navigation and
-deliver an exceptional user experience across devices.</p>
+                  deliver an exceptional user experience across devices.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -310,7 +310,7 @@ deliver an exceptional user experience across devices.</p>
                   <Link href={"#"}>App Development </Link>
                 </h5>
                 <p>Developing scalable and user-centric applications that streamline processes, enhance
-engagement, and provide innovative solutions tailored to business needs.</p>
+                  engagement, and provide innovative solutions tailored to business needs.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -327,7 +327,7 @@ engagement, and provide innovative solutions tailored to business needs.</p>
                   <Link href={"#"}>DevOps</Link>
                 </h5>
                 <p>Implementing efficient, automated workflows that improve software delivery, ensure system
-reliability, and accelerate innovation while reducing downtime.</p>
+                  reliability, and accelerate innovation while reducing downtime.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -549,7 +549,7 @@ reliability, and accelerate innovation while reducing downtime.</p>
               highlightText={"a Project?"}
               className={styles.projectHeading}
             />
-            <CommonButton text={"Our Services"} href="#" />
+            <CommonButton text={"Our Services"} href="service" />
           </div>
         </div>
       </section>
@@ -563,7 +563,7 @@ reliability, and accelerate innovation while reducing downtime.</p>
           />
           <div
             className={styles.serviceWrap}
-            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+          // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
           >
             <Heading
               mainText={"Showcasing Innovation,"}
@@ -579,7 +579,7 @@ reliability, and accelerate innovation while reducing downtime.</p>
       {/* =====contact===== */}
       <section
         className={styles.contact}
-        // style={{ backgroundImage: "url(/images/map.png)" }}
+      // style={{ backgroundImage: "url(/images/map.png)" }}
       >
         <div className="container">
           <div className={styles.contactTopImage}>
