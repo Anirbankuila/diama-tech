@@ -58,8 +58,8 @@ export default function Home() {
                   text={"Unlock Limitless Possibilities in the Digital Era"}
                 />
                 <h1>
-                  From strategy to execution, we fuel your journey with{" "}
-                  <span> creativity, technology, and excellence.</span>
+                  Your Growth, Our Mission — {" "}
+                  <span> Strategy, Technology, and Creativity in Perfect Harmony.</span>
                 </h1>
                 <CommonButton text="Our Services" href="/services" />
               </div>
@@ -71,7 +71,7 @@ export default function Home() {
               <div className={styles.bannerContent}>
                 <Subtitle text={"We Connect The Digital Dots"} />
                 <h1>
-                  Your digital journey from utopia to eutopia
+                  Your digital journey from
                   <span> utopia to eutopia</span>
                 </h1>
                 <CommonButton text="Our Services" href="/services" />
@@ -84,7 +84,7 @@ export default function Home() {
               <div className={styles.bannerContent}>
                 <Subtitle
                   text={
-                    "We understand your goals and help you scale your business sustainably and financially."
+                    "Empowering Startups and SMBs with Smart Digital Solutions"
                   }
                 />
                 <h1>
@@ -167,9 +167,9 @@ export default function Home() {
               <div className={styles.visionContent}>
                 <Subtitle text={"Our Vison"} />
                 <p>
-                  To become a global leader in digital innovation by creating
-                  transformative solutions that empower businesses, inspire
-                  creativity, and shape a smarter, connected future.
+                  To empower businesses worldwide with innovative digital solutions that drive growth, fuel
+creativity, and create meaningful connections—helping them succeed today and shape a
+smarter, more connected tomorrow.
                 </p>
                 <span className={styles.visionPoint}>Key vison point:</span>
                 <ul>
@@ -238,7 +238,8 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>Digital Marketing</Link>
                 </h5>
-                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+                <p>Crafting data-driven, creative marketing strategies that connect businesses with their audience,
+boost visibility, and drive sustainable growth.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -273,7 +274,8 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>Graphic Design</Link>
                 </h5>
-                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+                <p>Creating impactful and aesthetically engaging designs that communicate your brand’s message
+clearly and leave a lasting impression.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -289,7 +291,8 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>Web Design & Devlopment</Link>
                 </h5>
-                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+                <p>Building responsive, fast, and visually appealing websites that offer seamless navigation and
+deliver an exceptional user experience across devices.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -306,7 +309,8 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>App Development </Link>
                 </h5>
-                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+                <p>Developing scalable and user-centric applications that streamline processes, enhance
+engagement, and provide innovative solutions tailored to business needs.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -322,7 +326,8 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>DevOps</Link>
                 </h5>
-                <p>Elevate Your Brand with Strategic Digital Marketing.</p>
+                <p>Implementing efficient, automated workflows that improve software delivery, ensure system
+reliability, and accelerate innovation while reducing downtime.</p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
