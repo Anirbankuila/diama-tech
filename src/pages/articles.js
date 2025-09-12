@@ -26,6 +26,7 @@ import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { Form } from "react-bootstrap";
+import { blogContent } from "@/utils/constantData";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
