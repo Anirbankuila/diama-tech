@@ -50,7 +50,7 @@ export default function Service() {
             </div>
           </div>
         </div>
-      
+
       </section>
 
       {/* ======technology====== */}
@@ -59,14 +59,12 @@ export default function Service() {
           <div className={styles.topHeader}>
             <h3>Technologies we use</h3>
             <p>
-              Get to elevate your business with top-notch IT technology and
-              enter the world of digital technology Lorem Ipsum is simply <br />{" "}
-              dummy text of the printing and typesetting industry. Lorem
+              Elevate your business with cutting-edge IT solutions and embrace the digital transformation.<br />{" "} Leverage industry-leading technologies to enhance efficiency, innovation, and growth in your organization.
             </p>
           </div>
           <div className={styles.techImg}>
             <img src={"/images/techImg.png"} alt="tech img" />
-            <p>Tools shown are used in our projects, not owned bt us.</p>
+            <p>Disclaimer: The tools and software listed here are third-party products, and are not owned, endorsed, or affiliated with our company. Their names, logos, and trademarks remain the property of their respective owners.</p>
           </div>
         </div>
       </section>
