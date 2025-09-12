@@ -52,32 +52,32 @@ export default function Home() {
             autoplay={{ delay: 3000 }}
             loop={true}
           >
-            <SwiperSlide>
-              <div className={styles.bannerContent}>
-                <Subtitle
-                  text={"Unlock Limitless Possibilities in the Digital Era"}
-                />
-                <h1>
-                  Your Growth, Our Mission — {" "}
-                  <span> Strategy, Technology, and Creativity in Perfect Harmony.</span>
-                </h1>
-                <CommonButton text="Our Services" href="/services" />
-              </div>
-              <div className={styles.bannerImage}>
-                <img src={"/images/banner-image.png"} alt="banner image" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
+              <SwiperSlide>
               <div className={styles.bannerContent}>
                 <Subtitle text={"We Connect The Digital Dots"} />
                 <h1>
                   Your digital journey from
                   <span> utopia to eutopia</span>
                 </h1>
-                <CommonButton text="Our Services" href="/services" />
+                <CommonButton text="Our Services" href="/service" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/Connect-the-Dots.jpg"} alt="banner image" />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={styles.bannerContent}>
+                <Subtitle
+                  text={"Unlock Limitless Possibilities in the Digital Era"}
+                />
+                <h1>
+                  Your Growth,our mission {" "}
+                  <span> strategy,technology & creativity in perfect harmony.</span>
+                </h1>
+                <CommonButton text="Our Services" href="/service" />
+              </div>
+              <div className={styles.bannerImage}>
+                <img src={"/images/banner-image.png"} alt="banner image" />
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -549,7 +549,7 @@ export default function Home() {
               highlightText={"a Project?"}
               className={styles.projectHeading}
             />
-            <CommonButton text={"Our Services"} href="service" />
+            <CommonButton text={"Our Services"} href="/service" />
           </div>
         </div>
       </section>
