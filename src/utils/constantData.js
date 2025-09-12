@@ -1,7 +1,7 @@
 export const blogContent = [
   {
     category: 'All',
-    imageUrl: '/images/blog-all.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'Startup Growth Strategies', description: 'Discover proven strategies to scale your startup efficiently in competitive markets.' },
       { title: 'Latest Tech Trends', description: 'Explore the newest technologies shaping the future of startups and business innovation.' },
@@ -11,7 +11,7 @@ export const blogContent = [
   },
   {
     category: 'Politics',
-    imageUrl: '/images/blog-politics.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'Policy Impacts on Startups', description: 'How government policies can accelerate or hinder startup growth.' },
       { title: 'Political Risks and Startups', description: 'Understanding political risks and managing them in your business strategy.' },
@@ -21,7 +21,7 @@ export const blogContent = [
   },
   {
     category: 'Skill Acquisition',
-    imageUrl: '/images/blog-skill.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'Essential Skills for Startup Founders', description: 'Key skills every startup founder must develop for success.' },
       { title: 'Upskilling in Tech', description: 'How continuous learning empowers startup teams to stay competitive.' },
@@ -31,7 +31,7 @@ export const blogContent = [
   },
   {
     category: 'Education',
-    imageUrl: '/images/blog-education.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'EdTech Innovations', description: 'How startups are transforming the education landscape through technology.' },
       { title: 'Entrepreneurship Education', description: 'Importance of integrating entrepreneurship into modern education.' },
