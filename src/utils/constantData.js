@@ -41,7 +41,7 @@ export const blogContent = [
   },
   {
     category: 'Sport',
-    imageUrl: '/images/blog-sport.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'Startups in Sports Tech', description: 'Emerging sports technology solutions driven by innovative startups.' },
       { title: 'Fitness App Development', description: 'How startups build apps that revolutionize personal fitness management.' },
@@ -51,7 +51,7 @@ export const blogContent = [
   },
   {
     category: 'Business',
-    imageUrl: '/images/blog-business.png',
+    imageUrl: '/images/blog-1.png',
     articles: [
       { title: 'Business Models for Startups', description: 'Popular business models that drive startup success.' },
       { title: 'Fundraising Tips', description: 'How to attract investors and raise startup capital efficiently.' },
