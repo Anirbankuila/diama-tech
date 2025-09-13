@@ -22,7 +22,7 @@
 .bannerContent h1 span {
   display: block;
   font-weight: 600;
-  background: linear-gradient(90deg, #E9B492 0%, #D7A882 48.08%, #FFCBBB 100%);
+  background: linear-gradient(97.23deg, #fed658 0%, #f8b018 100%);
   -webkit-background-clip: text;
   /* For Safari/Chrome */
   -webkit-text-fill-color: transparent;
@@ -73,7 +73,7 @@
 .serviceWrap::before {
   position: absolute;
   content: "";
-  background-image: url('/images/serviceBg.jpg');
+  background-image: url("/images/serviceBg.jpg");
   width: 100%;
   height: 100%;
   top: 0;
@@ -120,7 +120,7 @@
   list-style: none;
   padding: 0;
   border: 1px solid #373737;
-  background: #1F2020;
+  background: #1f2020;
   border-radius: 150px;
   overflow-x: auto;
   max-width: 870px;
@@ -137,7 +137,6 @@
   font-weight: 300;
   color: #fff;
   border-radius: 150px;
-
 }
 
 .portfolioTab li.active {
@@ -168,7 +167,7 @@
 
 .blogItem:not(:last-child) {
   margin-bottom: 15px;
-  border-bottom: 1px solid #FFFFFF1F;
+  border-bottom: 1px solid #ffffff1f;
 }
 
 .blogImg {
@@ -176,7 +175,6 @@
   overflow: hidden;
   border: 1px solid #fff;
   border-radius: 40px;
-
 }
 
 .blogItem h5 {
@@ -215,7 +213,7 @@
 }
 
 /* =========other blog======= */
-.otherBlog{
+.otherBlog {
   position: relative;
   padding: 60px 0;
   background-size: cover;
@@ -227,61 +225,61 @@
   text-align: center;
   margin-bottom: 40px;
 }
-.EachBlogContent:not(:last-child)  {
+.EachBlogContent:not(:last-child) {
   margin-bottom: 40px;
 }
-.EachBlogContent h5{
+.EachBlogContent h5 {
   font-size: 24px;
   font-weight: 500;
   opacity: 1;
   margin-bottom: 15px;
   color: #fff;
 }
-.EachBlogContent p{
+.EachBlogContent p {
   font-size: 16px;
   font-weight: 300;
   opacity: 0.7;
   margin-bottom: 8px;
 }
-.blogRightImg{
+.blogRightImg {
   position: relative;
   overflow: hidden;
   border-radius: 40px;
 }
-.blogRightImg img{
+.blogRightImg img {
   height: 500px;
   object-fit: cover;
 }
 .blogShare {
   position: relative;
-  background: #0A1C8F;
-  border: 0.5px solid #FFFFFF;
+  background: #0a1c8f;
+  border: 0.5px solid #ffffff;
   border-radius: 20px;
   padding: 20px;
   margin-top: 20px;
 }
-.blogShare  p{
+.blogShare p {
   font-size: 16px;
   font-weight: 600;
 
   margin-bottom: 5px;
 }
-.blogShare  ul{
+.blogShare ul {
   display: flex;
   gap: 10px;
   margin: 0;
 }
-.blogShare  ul li svg{
+.blogShare ul li svg {
   font-size: 30px;
   color: #fff;
 }
 
-.articleTop{
+.articleTop {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
-.articleTop h3{
+.articleTop h3 {
   font-size: 40px;
   line-height: 50px;
   color: #fff;
@@ -291,7 +289,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  
 }
 
 .blogBlock {
@@ -305,7 +302,7 @@
   height: 252px;
   border-radius: 20px;
   margin-bottom: 15px;
-  border: 0.5px solid #FFFFFF
+  border: 0.5px solid #ffffff;
 }
 
 .blogBlock h4 {
@@ -317,26 +314,26 @@
 
 .blogBlock p {
   font-size: 16px;
-  color: #FFFFFFB2;
+  color: #ffffffb2;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
 .learnMore {
-  color: #F8AD15;
+  color: #f8ad15;
   text-decoration: underline;
   font-size: 18px;
   font-weight: 400;
 }
-.learnMore svg{
+.learnMore svg {
   transform: rotateZ(-30deg);
 }
-.customNav{
+.customNav {
   display: flex;
   align-items: center;
   gap: 30px;
 }
-.navBtn{
+.navBtn {
   position: relative;
   border: 1px solid #fff;
   width: 50px;
@@ -347,13 +344,10 @@
   justify-content: center;
   background: transparent;
 }
-.navBtn svg{
+.navBtn svg {
   font-size: 20px;
   color: #fff;
 }
-
-
-
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -368,20 +362,19 @@
   }
 }
 
-
 /* =======subscribe======= */
-.subscribe{
+.subscribe {
   position: relative;
   padding: 60px 0;
 }
-.subscribeWrap{
+.subscribeWrap {
   position: relative;
   max-width: 980px;
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
-.subscribeWrapImg{
+.subscribeWrapImg {
   position: relative;
 }
 /* .subscribeWrapImg::before{
@@ -394,11 +387,11 @@
   left: 0;
 
 } */
-.subscribeWrapContent{
+.subscribeWrapContent {
   position: relative;
 }
 
-.subscribeWrapContent p{
+.subscribeWrapContent p {
   font-size: 16px;
   font-weight: 300;
   margin: 25px 0 20px;
@@ -421,7 +414,7 @@
   font-weight: 400;
   background: #373737;
   color: #fff;
-  border: 1px solid #5A5A5A
+  border: 1px solid #5a5a5a;
 }
 
 .emailInput::placeholder {
@@ -434,7 +427,7 @@
   font-size: 20px;
   font-weight: 400;
   border-radius: 70px;
-  background: linear-gradient(98.51deg, #FED758 -32.97%, #F8B018 100%);
+  background: linear-gradient(98.51deg, #fed758 -32.97%, #f8b018 100%);
   color: #121212;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -448,12 +441,6 @@
   font-size: 0.8rem;
   color: #888;
 }
-
-
-
-
-
-
 
 /* ========buildTogether======== */
 .buildTogether {

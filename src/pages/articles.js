@@ -1,32 +1,22 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Articles.module.css";
+import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
-import Subtitle from "@/component/Subtitle/Subtitlle";
-import Link from "next/link";
-import CommonButton from "@/component/CommonBtn/CommonBtn";
 import Heading from "@/component/Heading/Heading";
+import Subtitle from "@/component/Subtitle/Subtitlle";
+import styles from "@/styles/Articles.module.css";
+import { blogContent } from "@/utils/constantData";
+import { Inter } from "next/font/google";
+import Head from "next/head";
+import Link from "next/link";
+import { useRef, useState } from "react";
+import { Form } from "react-bootstrap";
+import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import {
-  HiOutlineArrowSmLeft,
-  HiOutlineArrowSmRight,
-  HiStar,
-} from "react-icons/hi";
-import { useRef, useState } from "react";
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
-import Portfolio from "@/component/Portfolio/Portfolio";
-import Footer from "@/component/Footer/Footer";
-import Counter from "@/component/Counter/Counter";
-import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
-import { TbBrandLinkedinFilled } from "react-icons/tb";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { Form } from "react-bootstrap";
-import { blogContent } from "@/utils/constantData";
 
 const interSans = Inter({
   variable: "--font-geist-sans",
@@ -122,7 +112,7 @@ export default function Service() {
         <div className="container">
           <div
             className={styles.serviceWrap}
-          // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
           >
             <div className={styles.blogTop}>
               <div className={styles.blogTopHeader}>
@@ -146,57 +136,28 @@ export default function Service() {
                 </ul>
               </div>
             </div>
-            {/* <div className={styles.blogTabContent}>
-              {tabs.map((tab, index) => (
-                <div
-                  key={index}
-                  className={`${styles.tabPane} ${activeTab === index ? styles.show : styles.hide
-                    }`}
-                >
-                  <div className="row align-items-start">
-                    <div className="col-lg-7 ">
-                      <div className={styles.blogImg}>
-                        <img
-                          src={`/images/blog-1.png`}
-                          alt={tab}
-                          className="img-fluid rounded"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-5">
-                      <div className={styles.blogList}>
-                        {[1, 2, 3, 4].map((item) => (
-                          <div key={item} className={styles.blogItem}>
-                            <h5>Lorem ipsum dolor sit amet</h5>
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit, sed do eiusmod tempor incididunt ut labore
-                              et dolore magna aliqua...
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div> */}
             <div className={styles.blogTabContent}>
               {tabs.map((tab, index) => {
-                const currentContent = blogContent.find(item => item.category === tab);
+                const currentContent = blogContent.find(
+                  (item) => item.category === tab
+                );
 
                 return (
                   <div
                     key={index}
-                    className={`${styles.tabPane} ${activeTab === index ? styles.show : styles.hide}`}
+                    className={`${styles.tabPane} ${
+                      activeTab === index ? styles.show : styles.hide
+                    }`}
                   >
                     <div className="row align-items-start">
                       {/* Left Image Section */}
                       <div className="col-lg-7">
                         <div className={styles.blogImg}>
                           <img
-                            src={currentContent?.imageUrl ?? '/images/blog-default.png'}
+                            src={
+                              currentContent?.imageUrl ??
+                              "/images/blog-default.png"
+                            }
                             alt={tab}
                             className="img-fluid rounded"
                           />
@@ -219,7 +180,6 @@ export default function Service() {
                 );
               })}
             </div>
-
           </div>
         </div>
       </section>
@@ -231,7 +191,7 @@ export default function Service() {
       >
         <div className="container">
           <div className={styles.blogHeading}>
-            <Heading mainText={"Other Blogs"} />
+            <Heading mainText={"More Blogs"} />
             <p>Discover more stories you may find interesting.</p>
           </div>
           <div className="row">
@@ -439,7 +399,10 @@ export default function Service() {
                   Subscribe
                 </button>
               </Form>
-              <p>Your information will never be shard with third parties, and you can unsubscribe from our updates at any time.</p>
+              <p>
+                Your information will never be shard with third parties, and you
+                can unsubscribe from our updates at any time.
+              </p>
             </div>
           </div>
         </div>

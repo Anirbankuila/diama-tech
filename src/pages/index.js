@@ -52,12 +52,12 @@ export default function Home() {
             autoplay={{ delay: 3000 }}
             loop={true}
           >
-              <SwiperSlide>
+            <SwiperSlide>
               <div className={styles.bannerContent}>
                 <Subtitle text={"We Connect The Digital Dots"} />
                 <h1>
-                  Your digital journey from
-                  <span> utopia to eutopia</span>
+                  Your digital journey from <br />
+                  <span> Utopia to Eutopia</span>
                 </h1>
                 <CommonButton text="Our Services" href="/service" />
               </div>
@@ -71,8 +71,10 @@ export default function Home() {
                   text={"Unlock Limitless Possibilities in the Digital Era"}
                 />
                 <h1>
-                  Your Growth,our mission {" "}
-                  <span> strategy,technology & creativity in perfect harmony.</span>
+                  Your Growth,our mission
+                  <span>
+                    strategy,technology & creativity in perfect harmony.
+                  </span>
                 </h1>
                 <CommonButton text="Our Services" href="/service" />
               </div>
@@ -167,8 +169,9 @@ export default function Home() {
               <div className={styles.visionContent}>
                 <Subtitle text={"Our Vison"} />
                 <p>
-                  To empower businesses worldwide with innovative digital solutions that drive growth, fuel
-                  creativity, and create meaningful connections—helping them succeed today and shape a
+                  To empower businesses worldwide with innovative digital
+                  solutions that drive growth, fuel creativity, and create
+                  meaningful connections—helping them succeed today and shape a
                   smarter, more connected tomorrow.
                 </p>
                 <span className={styles.visionPoint}>Key vison point:</span>
@@ -231,15 +234,18 @@ export default function Home() {
           </div>
           <div
             className={styles.serviceWrap}
-          // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
           >
             <div className={styles.eachService}>
               <div className={styles.eachServiceContent}>
                 <h5>
                   <Link href={"#"}>Digital Marketing</Link>
                 </h5>
-                <p>Crafting data-driven, creative marketing strategies that connect businesses with their audience,
-                  boost visibility, and drive sustainable growth.</p>
+                <p>
+                  Crafting data-driven, creative marketing strategies that
+                  connect businesses with their audience, boost visibility, and
+                  drive sustainable growth.
+                </p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -274,8 +280,11 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>Graphic Design</Link>
                 </h5>
-                <p>Creating impactful and aesthetically engaging designs that communicate your brand’s message
-                  clearly and leave a lasting impression.</p>
+                <p>
+                  Creating impactful and aesthetically engaging designs that
+                  communicate your brand’s message clearly and leave a lasting
+                  impression.
+                </p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -291,8 +300,11 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>Web Design & Devlopment</Link>
                 </h5>
-                <p>Building responsive, fast, and visually appealing websites that offer seamless navigation and
-                  deliver an exceptional user experience across devices.</p>
+                <p>
+                  Building responsive, fast, and visually appealing websites
+                  that offer seamless navigation and deliver an exceptional user
+                  experience across devices.
+                </p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -309,8 +321,11 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>App Development </Link>
                 </h5>
-                <p>Developing scalable and user-centric applications that streamline processes, enhance
-                  engagement, and provide innovative solutions tailored to business needs.</p>
+                <p>
+                  Developing scalable and user-centric applications that
+                  streamline processes, enhance engagement, and provide
+                  innovative solutions tailored to business needs.
+                </p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -326,8 +341,11 @@ export default function Home() {
                 <h5>
                   <Link href={"#"}>DevOps</Link>
                 </h5>
-                <p>Implementing efficient, automated workflows that improve software delivery, ensure system
-                  reliability, and accelerate innovation while reducing downtime.</p>
+                <p>
+                  Implementing efficient, automated workflows that improve
+                  software delivery, ensure system reliability, and accelerate
+                  innovation while reducing downtime.
+                </p>
               </div>
               <div className={styles.eachServiceImg}>
                 <img src={"/images/ui-ux.png"} alt="ui-ux" />
@@ -563,7 +581,7 @@ export default function Home() {
           />
           <div
             className={styles.serviceWrap}
-          // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
+            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
           >
             <Heading
               mainText={"Showcasing Innovation,"}
@@ -579,7 +597,7 @@ export default function Home() {
       {/* =====contact===== */}
       <section
         className={styles.contact}
-      // style={{ backgroundImage: "url(/images/map.png)" }}
+        // style={{ backgroundImage: "url(/images/map.png)" }}
       >
         <div className="container">
           <div className={styles.contactTopImage}>
@@ -589,7 +607,7 @@ export default function Home() {
             <div className="col-lg-4">
               <div className={styles.contactLeft}>
                 <h5>What we’re doing</h5>
-                <p>Renewable energy under 5 Country.</p>
+                <p>Digital Transformation</p>
                 <CommonButton text={"Work With Us"} />
               </div>
             </div>
@@ -597,7 +615,10 @@ export default function Home() {
               <Counter />
             </div>
           </div>
-          <p className={styles.creative}>From <img src={"/images/india.png"} alt="banner image" /> with <img src={"/images/love.png"} alt="banner image" /> and creativity.</p>
+          <p className={styles.creative}>
+            From <img src={"/images/india.png"} alt="banner image" /> with{" "}
+            <img src={"/images/love.png"} alt="banner image" /> and creativity.
+          </p>
         </div>
       </section>
 
