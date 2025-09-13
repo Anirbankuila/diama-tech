@@ -25,14 +25,74 @@ const MultiStepModal = ({ isOpen, onClose }) => {
   const [selectedTech, setSelectedTech] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState([]);
+  console.log("Selected Categories:", selectedCategories);
+  const [projectDescription, setProjectDescription] = useState("");
+  const [budget, setBudget] = useState("");
+  const [timeline, setTimeline] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
 
   const nextStep = () => setStep((prev) => prev + 1);
-  const prevStep = () => setStep((prev) => prev - 1);
-  const dropdownRef = useRef(null);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted!");
+  const resetForm = () => {
+    setStep(1);
+    setSelectedTech([]);
+    setShowDropdown(false);
+    setSelectedCategories([]);
+    setProjectDescription("");
+    setBudget("");
+    setTimeline("");
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
+
+  const handleClose = () => {
+    resetForm();
     onClose();
+  };
+
+  const dropdownRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      name,
+      email,
+      phone,
+      message,
+      categories: selectedCategories,
+      projectDescription,
+      technologies: selectedTech,
+      budget,
+      timeline,
+    };
+    console.log("Submitting payload:", payload);
+
+    try {
+      const response = await fetch("/api/quotation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit quotation.");
+      }
+
+      const data = await response.json();
+      console.log(data?.data,'data');
+      alert(data.message);
+      handleClose();
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   const handleAddClick = () => {
@@ -54,18 +114,17 @@ const MultiStepModal = ({ isOpen, onClose }) => {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
   if (!isOpen) return null;
+
   const toggleCategory = (category) => {
     if (selectedCategories.includes(category)) {
-      // Remove if already selected
       setSelectedCategories(selectedCategories.filter((c) => c !== category));
     } else {
-      // Add if not selected
       setSelectedCategories([...selectedCategories, category]);
     }
   };
@@ -73,7 +132,7 @@ const MultiStepModal = ({ isOpen, onClose }) => {
   return (
     <div className={styles.modalBackdrop}>
       <div className={styles.modalContent}>
-        <Button className={styles.closeButton} onClick={onClose}>
+        <Button className={styles.closeButton} onClick={handleClose}>
           <RxCross2 />
         </Button>
 
@@ -125,7 +184,10 @@ const MultiStepModal = ({ isOpen, onClose }) => {
                           {isActive && (
                             <button
                               className={styles.removeButton}
-                              onClick={() => toggleCategory(category)}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleCategory(category);
+                              }}
                             >
                               <RxCross2 />
                             </button>
@@ -142,6 +204,8 @@ const MultiStepModal = ({ isOpen, onClose }) => {
                     className={styles.eachInput}
                     placeholder="Describe Your Project"
                     rows={4}
+                    value={projectDescription}
+                    onChange={(e) => setProjectDescription(e.target.value)}
                   />
                 </div>
 
@@ -165,17 +229,18 @@ const MultiStepModal = ({ isOpen, onClose }) => {
                         </li>
                       ))}
                     </ul>
-                    <Button
+                    <button
+                      type="button"
                       className={styles.addButton}
                       onClick={handleAddClick}
                     >
                       <HiMiniPlus />
                       Add
-                    </Button>
+                    </button>
                   </div>
 
                   {showDropdown && (
-                    <div className={styles.dropdown}>
+                    <div className={styles.dropdown} ref={dropdownRef}>
                       {techOptions.map((tech, index) => (
                         <div
                           key={index}
@@ -188,20 +253,26 @@ const MultiStepModal = ({ isOpen, onClose }) => {
                     </div>
                   )}
                 </div>
+
                 <div className={styles.selectCat}>
                   <h5>Estimated Budget</h5>
                   <input
                     type="text"
                     className={styles.eachInput}
                     placeholder="Enter your budget"
+                    value={budget}
+                    onChange={(e) => setBudget(e.target.value)}
                   />
                 </div>
+
                 <div className={styles.selectCat}>
                   <h5>Project Timeline</h5>
                   <input
                     type="text"
                     className={styles.eachInput}
                     placeholder="How soon do you want the project to be delivered?"
+                    value={timeline}
+                    onChange={(e) => setTimeline(e.target.value)}
                   />
                 </div>
 
@@ -242,48 +313,49 @@ const MultiStepModal = ({ isOpen, onClose }) => {
               </div>
 
               <Form onSubmit={handleSubmit}>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formName">
                   <Form.Label>Full Name</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Name here"
                     className={styles.eachInput}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </Form.Group>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="Enter email"
                     className={styles.eachInput}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </Form.Group>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formPhone">
                   <Form.Label>Phone Number</Form.Label>
                   <Form.Control
                     type="tel"
                     placeholder="Enter phone number"
                     className={styles.eachInput}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </Form.Group>
-                <Form.Group controlId="formBasicEmail">
+                <Form.Group controlId="formMessage">
                   <Form.Label>Your Message</Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={7}
                     placeholder="Leave us message..."
                     className={styles.eachInput}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                   />
                 </Form.Group>
 
                 <div className={styles.buttonGroup}>
-                  {/* <Button
-                    type="button"
-                    className={styles.modalButton}
-                    onClick={prevStep}
-                  >
-                    Back
-                  </Button> */}
                   <Button type="submit" className={styles.modalButton}>
                     Submit & Get My Quotation
                   </Button>

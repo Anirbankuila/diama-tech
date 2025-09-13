@@ -192,7 +192,7 @@
     border: 1px solid #FFE38C;
 }
 
-.closeButton {
+.modalBackdrop .closeButton {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -209,11 +209,11 @@
     z-index: 1;
     padding: 0;
 }
-.closeButton svg{
+.modalBackdrop .closeButton svg{
     font-size: 18px;
     color: #141211;
 }
-.closeButton:hover {
+.modalBackdrop .closeButton:hover {
     background: #F8B018;
 }
 .buttonGroup {
@@ -222,7 +222,7 @@
     margin-top: 20px;
 }
 
-.modalButton {
+.step .modalButton {
     padding: 10px 20px;
     background: linear-gradient(97.23deg, #fed658 0%, #f8b018 100%);
     border: none;
@@ -232,4 +232,5 @@
     font-size: 20px;
     font-weight: 500;
     color: #141211;
+
 }

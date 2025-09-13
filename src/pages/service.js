@@ -2,12 +2,13 @@ import CommonButton from "@/component/CommonBtn/CommonBtn";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
+import MultiStepModal from "@/component/MultiStepModal/MultiStepModal";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import styles from "@/styles/Service.module.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -19,6 +20,9 @@ const interSans = Inter({
 });
 
 export default function Service() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const swiperRef = useRef(null);
   return (
     <>
@@ -38,7 +42,7 @@ export default function Service() {
               <h1>
                 Crafting Experiences That <span> Make an Impact</span>
               </h1>
-              <CommonButton text="Start Your Project" href="/" />
+              <CommonButton text="Start Your Project" href="#" onClick={openModal}/>
             </div>
 
             <div className={styles.bannerRightContent}>
@@ -50,6 +54,7 @@ export default function Service() {
             </div>
           </div>
         </div>
+        <MultiStepModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
 
       {/* ======technology====== */}
@@ -249,7 +254,7 @@ export default function Service() {
                     ensure faster delivery, improved collaboration, and scalable
                     performance.
                   </p>
-                  <Link href={"/service/devops"} v>
+                  <Link href={"/service/devops"} >
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
