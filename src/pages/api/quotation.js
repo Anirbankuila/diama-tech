@@ -1,15 +1,5 @@
-import mongoose from "mongoose";
+import { connectToDatabase } from "./lib/mongodb";
 import ProjectQuotation from "./models/ProjectQuotation";
-
-const MONGODB_URI = process.env.MONGODB_URI;
-
-async function connectToDB() {
-  if (mongoose.connections[0].readyState) return;
-  await mongoose.connect(MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-}
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -23,8 +13,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    await connectToDB();
-
+    await connectToDatabase();
     const newQuotation = new ProjectQuotation({
       name,
       email,

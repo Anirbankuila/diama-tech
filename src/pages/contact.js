@@ -5,7 +5,57 @@ import Heading from "@/component/Heading/Heading";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import styles from "@/styles/Contact.module.css";
 import Head from "next/head";
-export default function contact() {
+import { useState } from "react";
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    emailAddress: "",
+    message: "",
+    isAcceptTermsCondition: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("/api/consultation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        alert("Consultation submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          emailAddress: "",
+          message: "",
+          website: "",
+          isAcceptTermsCondition: false,
+        });
+      } else {
+        const result = await res.json();
+        alert(`Error: ${result.message}`);
+      }
+    } catch (error) {
+      console.error("Submit Error:", error);
+      alert("Something went wrong");
+    }
+  };
   return (
     <>
       <Head>
@@ -46,23 +96,51 @@ export default function contact() {
                   message, and we&apos;ll respond within 24 hours.
                 </p>
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className={styles.inputGrid}>
                   <div className={styles.inputGroup}>
                     <label>First Name</label>
-                    <input type="text" placeholder="First name" />
+                    <input
+                      type="text"
+                      placeholder="First name"
+                      name="firstName"
+                      onChange={handleChange}
+                      value={formData.firstName}
+                      required
+                    />
                   </div>
                   <div className={styles.inputGroup}>
                     <label>Last Name</label>
-                    <input type="text" placeholder="Last name" />
+                    <input
+                      type="text"
+                      placeholder="Last name"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                   <div className={styles.inputGroup}>
                     <label>Email Address</label>
-                    <input type="email" placeholder="Email address" />
+                    <input
+                      type="email"
+                      placeholder="Email address"
+                      name="emailAddress"
+                      onChange={handleChange}
+                      required
+                      value={formData.emailAddress}
+                    />
                   </div>
                   <div className={styles.inputGroup}>
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="Phone number" />
+                    <input
+                      type="tel"
+                      placeholder="Phone number"
+                      name="phoneNumber"
+                      onChange={handleChange}
+                      value={formData.phoneNumber}
+                      required
+                    />
                   </div>
                 </div>
                 <div className={styles.inputGroup}>
@@ -70,15 +148,25 @@ export default function contact() {
                   <textarea
                     placeholder="Leave us message..."
                     className={styles.textarea}
+                    value={formData.message}
+                    name="message"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
 
                 <label className={styles.checkboxLabel}>
-                  <input type="checkbox" />I agree to our friendly{" "}
-                  <a href="#">privacy policy</a>
+                  <input
+                    type="checkbox"
+                    value={formData.isAcceptTermsCondition}
+                    onChange={handleChange}
+                    required
+                    name="isAcceptTermsCondition"
+                  />
+                  I agree to our friendly <a href="#">privacy policy</a>
                 </label>
 
-                <CommonButton text="Send message" href="#" />
+                <CommonButton text="Send message" btnType="submit" />
               </form>
             </div>
 
@@ -139,7 +227,11 @@ export default function contact() {
         <div className="container">
           <div className={styles.sectionHeader}>
             <Subtitle text={"Come say hello!"} />
-            <Heading className={styles.locationHeading} mainText={"Step into our world"} highlightText={'discover our location.'} />
+            <Heading
+              className={styles.locationHeading}
+              mainText={"Step into our world"}
+              highlightText={"discover our location."}
+            />
           </div>
 
           <div className={styles.mapWrapper}>

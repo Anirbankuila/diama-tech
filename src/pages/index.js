@@ -7,10 +7,10 @@ import Portfolio from "@/component/Portfolio/Portfolio";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/Home.module.css";
+import { ServicesListData } from "@/utils/constantData";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
-import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,7 +23,6 @@ const interSans = Inter({
 });
 
 export default function Home() {
-  const swiperRef = useRef(null);
   return (
     <>
       <Head>
@@ -66,7 +65,7 @@ export default function Home() {
                   text={"Unlock Limitless Possibilities in the Digital Era"}
                 />
                 <h1>
-                  Your Growth,our mission
+                  Your Growth,our mission{" "}
                   <span>
                     strategy,technology & creativity in perfect harmony.
                   </span>
@@ -227,130 +226,29 @@ export default function Home() {
               business.
             </p>
           </div>
-          <div
-            className={styles.serviceWrap}
-            // style={{ backgroundImage: "url('/images/serviceBg.jpg')" }}
-          >
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>Digital Marketing</Link>
-                </h5>
-                <p>
-                  Crafting data-driven, creative marketing strategies that
-                  connect businesses with their audience, boost visibility, and
-                  drive sustainable growth.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>UI/UX Design</Link>
-                </h5>
-                <p>
-                  Designing intuitive, user-friendly, and visually stunning
-                  experiences that keep customers engaged and satisfied.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>Graphic Design</Link>
-                </h5>
-                <p>
-                  Creating impactful and aesthetically engaging designs that
-                  communicate your brand’s message clearly and leave a lasting
-                  impression.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>Web Design & Devlopment</Link>
-                </h5>
-                <p>
-                  Building responsive, fast, and visually appealing websites
-                  that offer seamless navigation and deliver an exceptional user
-                  experience across devices.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
-
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>App Development </Link>
-                </h5>
-                <p>
-                  Developing scalable and user-centric applications that
-                  streamline processes, enhance engagement, and provide
-                  innovative solutions tailored to business needs.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
-            <div className={styles.eachService}>
-              <div className={styles.eachServiceContent}>
-                <h5>
-                  <Link href={"#"}>DevOps</Link>
-                </h5>
-                <p>
-                  Implementing efficient, automated workflows that improve
-                  software delivery, ensure system reliability, and accelerate
-                  innovation while reducing downtime.
-                </p>
-              </div>
-              <div className={styles.eachServiceImg}>
-                <img src={"/images/ui-ux.png"} alt="ui-ux" />
-              </div>
-              <div className={styles.arrowBtn}>
-                <Link href={"#"}>
-                  <img src={"/images/arrow.png"} alt="ui-ux" />
-                </Link>
-              </div>
-            </div>
+          <div className={styles.serviceWrap}>
+            {ServicesListData.map((service, index) => {
+              return (
+                <div className={styles.eachService} key={index}>
+                  <div className={styles.eachServiceContent}>
+                    <h5>
+                      <Link href={`/service/${service.category}`}>
+                        {service.title}
+                      </Link>
+                    </h5>
+                    <p>{service.description}</p>
+                  </div>
+                  <div className={styles.eachServiceImg}>
+                    <img src={service.image} alt="ui-ux" />
+                  </div>
+                  <div className={styles.arrowBtn}>
+                    <Link href={`/service/${service.category}`}>
+                      <img src={"/images/arrow.png"} alt="service image" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

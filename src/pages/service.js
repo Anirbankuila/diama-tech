@@ -50,7 +50,6 @@ export default function Service() {
             </div>
           </div>
         </div>
-
       </section>
 
       {/* ======technology====== */}
@@ -59,12 +58,20 @@ export default function Service() {
           <div className={styles.topHeader}>
             <h3>Technologies we use</h3>
             <p>
-              Elevate your business with cutting-edge IT solutions and embrace the digital transformation.<br />{" "} Leverage industry-leading technologies to enhance efficiency, innovation, and growth in your organization.
+              Elevate your business with cutting-edge IT solutions and embrace
+              the digital transformation.
+              <br /> Leverage industry-leading technologies to enhance
+              efficiency, innovation, and growth in your organization.
             </p>
           </div>
           <div className={styles.techImg}>
             <img src={"/images/techImg.png"} alt="tech img" />
-            <p>Disclaimer: The tools and software listed here are third-party products, and are not owned, endorsed, or affiliated with our company. Their names, logos, and trademarks remain the property of their respective owners.</p>
+            <p>
+              Disclaimer: The tools and software listed here are third-party
+              products, and are not owned, endorsed, or affiliated with our
+              company. Their names, logos, and trademarks remain the property of
+              their respective owners.
+            </p>
           </div>
         </div>
       </section>
@@ -116,7 +123,7 @@ export default function Service() {
                     user satisfaction and engagement while aligning perfectly
                     with your brand’s identity.
                   </p>
-                  <Link href={"/ui-ux"}>
+                  <Link href={"/service/ui-ux-design"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
@@ -142,7 +149,7 @@ export default function Service() {
                     Every design is crafted to make a lasting impact and
                     strengthen your brand presence.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/service/graphic-design"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
@@ -167,7 +174,7 @@ export default function Service() {
                     Our goal is to drive measurable results by connecting your
                     brand with the right audience at the right time.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/service/digital-marketing"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
@@ -193,7 +200,7 @@ export default function Service() {
                     to deliver performance, reliability, and an excellent user
                     experience.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/service/app-development"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
@@ -218,7 +225,7 @@ export default function Service() {
                     creativity and technology, we deliver websites that attract,
                     engage, and convert visitors into loyal customers.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/service/web-design"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
@@ -242,7 +249,7 @@ export default function Service() {
                     ensure faster delivery, improved collaboration, and scalable
                     performance.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/service/devops"} v>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
