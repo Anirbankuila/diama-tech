@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Quotation from "../../models/Quotation";
+import ProjectQuotation from "./models/ProjectQuotation";
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -25,7 +25,11 @@ export default async function handler(req, res) {
   try {
     await connectToDB();
 
-    const newQuotation = new Quotation({ name, email, projectDescription });
+    const newQuotation = new ProjectQuotation({
+      name,
+      email,
+      projectDescription,
+    });
     await newQuotation.save();
 
     // Send email to support
