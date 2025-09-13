@@ -3,13 +3,14 @@ import { Company } from "@/component/Company/Company";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
+import MultiStepModal from "@/component/MultiStepModal/MultiStepModal";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/ui-ux.module.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import "swiper/css";
@@ -23,6 +24,10 @@ const interSans = Inter({
 
 export default function Service() {
   const swiperRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <>
       <Head>
@@ -48,10 +53,16 @@ export default function Service() {
                 Crafting seamless experiences that captivate users and{" "}
                 <span> grow your business. </span>
               </h1>
-              <CommonButton text="Talk to Our Team" href="/" />
+              <CommonButton
+                text="Talk to Our Team"
+                href="#"
+                className=""
+                onClick={openModal} // Handle open modal here
+              />
             </div>
           </div>
         </div>
+        <MultiStepModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
 
       {/* ======Hire us====== */}
