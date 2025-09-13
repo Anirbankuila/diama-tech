@@ -4,7 +4,7 @@ import styles from "./Company.module.css";
 
 export const Company = () => {
   return (
-    <section className={styles.companies}>
+    <div className={styles.companies}>
       <div className="container">
         <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
         <div className={styles.companyWrap}>
@@ -39,6 +39,6 @@ export const Company = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

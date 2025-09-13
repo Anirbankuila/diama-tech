@@ -116,7 +116,7 @@ export default function Service() {
                     user satisfaction and engagement while aligning perfectly
                     with your brand’s identity.
                   </p>
-                  <Link href={"#"}>
+                  <Link href={"/ui-ux"}>
                     Start Today <HiOutlineArrowSmRight />
                   </Link>
                 </div>
