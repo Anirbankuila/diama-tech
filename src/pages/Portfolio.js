@@ -86,14 +86,17 @@ export default function Portfolio() {
                   </p>
                 </div>
                 <a href={project.url} className={styles.viewCaseLink}>
-                  View Case Study <span className={styles.linkArrow}><FiArrowRight /></span>
+                  View Case Study{" "}
+                  <span className={styles.linkArrow}>
+                    <FiArrowRight />
+                  </span>
                 </a>
               </div>
             </div>
           ))}
         </div>
       </section>
-      <Testimonial />
+      <Testimonial backgroundStyle={{ background: "#1a1a1a" }} />
       <Company />
       <section
         className={styles.buildTogether}

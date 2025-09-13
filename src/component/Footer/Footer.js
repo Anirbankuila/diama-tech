@@ -1,17 +1,17 @@
-import { HiLocationMarker } from "react-icons/hi";
-import styles from "./Footer.module.css";
-import { BsEnvelopeFill } from "react-icons/bs";
 import Link from "next/link";
-import { TbBrandLinkedinFilled } from "react-icons/tb";
-import { PiInstagramLogoFill } from "react-icons/pi";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { GrYoutube } from "react-icons/gr";
+import { BsEnvelopeFill } from "react-icons/bs";
 import { GoArrowRight } from "react-icons/go";
+import { HiLocationMarker } from "react-icons/hi";
+import { PiFacebookLogoFill } from "react-icons/pi";
+import { TbBrandLinkedinFilled } from "react-icons/tb";
+import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer} style={{ backgroundImage: 'url(/images/footerBg.png)' }}>
-
+    <footer
+      className={styles.footer}
+      style={{ backgroundImage: "url(/images/footerBg.png)" }}
+    >
       <div className={styles.footerTop}>
         <div className={styles.marquee}>
           <div className={styles.marqueeContent}>
@@ -106,7 +106,7 @@ const Footer = () => {
                   <a href="#">Home</a>
                 </li>
                 <li>
-                  <a href="#">Services</a>
+                  <a href="/service">Services</a>
                 </li>
                 <li>
                   <a href="#">Studio</a>
@@ -133,7 +133,7 @@ const Footer = () => {
                   <a href="#">Explore</a>
                 </li>
                 <li>
-                  <a href="#">Accesibility</a>
+                  <a href="#">Accessibility</a>
                 </li>
               </ul>
             </div>
@@ -152,18 +152,20 @@ const Footer = () => {
           <div className={styles.social}>
             <ul>
               <li>
-                <Link href={"#"}>
+                <Link
+                  href={"https://www.linkedin.com/company/diamatechnologies/"}
+                >
                   <TbBrandLinkedinFilled />
                   LinkedIn
                 </Link>
               </li>
               <li>
-                <Link href={"#"}>
-                  <PiInstagramLogoFill />
-                  Instagram
+                <Link href={"https://www.facebook.com/share/16GP12BVLf/"}>
+                  <PiFacebookLogoFill />
+                  Facebook
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"#"}>
                   <GrYoutube />
                   Youtube
@@ -174,7 +176,7 @@ const Footer = () => {
                   <FaSquareXTwitter />
                   Twitter
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

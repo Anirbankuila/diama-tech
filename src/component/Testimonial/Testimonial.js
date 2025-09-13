@@ -19,10 +19,11 @@ const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-const Testimonial = () => {
+const Testimonial = ({ backgroundStyle }) => {
   const swiperRef = useRef(null);
+  console.log(backgroundStyle);
   return (
-    <section className={styles.testimonial}>
+    <section className={styles.testimonial} style={{ ...backgroundStyle }}>
       <div className="container">
         <div className={styles.testimonialWrap}>
           <img
@@ -116,7 +117,7 @@ const Testimonial = () => {
                   <span>Founder</span>
                 </div>
               </SwiperSlide>
-              {/* <SwiperSlide>
+              <SwiperSlide>
                 <div className={styles.slideItem}>
                   <BiSolidQuoteAltLeft className={styles.quoteLeft} />
                   <BiSolidQuoteAltRight className={styles.quoteRight} />
@@ -177,7 +178,7 @@ const Testimonial = () => {
                   <h4>Rajesh Mehra</h4>
                   <span>Founder</span>
                 </div>
-              </SwiperSlide> */}
+              </SwiperSlide>
             </Swiper>
             <div className={styles.navigationWrap}>
               <button
