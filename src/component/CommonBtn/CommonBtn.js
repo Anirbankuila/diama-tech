@@ -2,23 +2,21 @@ import { useRouter } from "next/router";
 import { FiArrowRight } from "react-icons/fi";
 import styles from "./CommonBtn.module.css";
 
-const CommonButton = ({
-  text,
-  href = "/",
-  className = "",
-  btnType = "text",
-}) => {
+const CommonButton = ({ text, href = "/", className = "", onClick }) => {
   const router = useRouter();
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick(); // Run the passed onClick handler if it exists
+    } else {
+      router.push(href); // Default navigation
+    }
+  };
+
   return (
     <button
-      onClick={() => {
-        if (href == "/") return;
-        else router.push(href);
-      }}
-      className={`${styles.cmnBtn}
-        ${className}
-      `}
-      type={btnType}
+      onClick={handleClick}
+      className={`${styles.cmnBtn} ${className}`}
     >
       {text}
       <span className={styles.arrow}>

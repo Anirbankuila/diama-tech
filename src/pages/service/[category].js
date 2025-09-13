@@ -3,6 +3,7 @@ import { Company } from "@/component/Company/Company";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
+import MultiStepModal from "@/component/MultiStepModal/MultiStepModal";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/ui-ux.module.css";
@@ -121,6 +122,7 @@ export default function Service() {
             </div>
           </div>
         </div>
+        <MultiStepModal isOpen={isModalOpen} onClose={closeModal} />
       </section>
 
       {/* ======Hire us====== */}

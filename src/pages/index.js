@@ -53,7 +53,7 @@ export default function Home() {
                   Your digital journey from <br />
                   <span> Utopia to Eutopia</span>
                 </h1>
-                <CommonButton text="Our Services" href="/service" />
+                <CommonButton text="Schedule a Meeting" href="/service" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/Connect-the-Dots.jpg"} alt="banner image" />
@@ -70,7 +70,7 @@ export default function Home() {
                     strategy,technology & creativity in perfect harmony.
                   </span>
                 </h1>
-                <CommonButton text="Our Services" href="/service" />
+                <CommonButton text="Schedule a Meeting" href="/service" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/banner-image.png"} alt="banner image" />
@@ -87,7 +87,7 @@ export default function Home() {
                   We are a digital startup for
                   <span> Startups and SMBs</span>
                 </h1>
-                <CommonButton text="Our Services" href="/services" />
+                <CommonButton text="Schedule a Meeting" href="/services" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/banner-3.png"} alt="banner image" />
