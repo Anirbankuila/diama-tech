@@ -116,7 +116,7 @@ const Testimonial = () => {
                   <span>Founder</span>
                 </div>
               </SwiperSlide>
-              {/* <SwiperSlide>
+              <SwiperSlide>
                 <div className={styles.slideItem}>
                   <BiSolidQuoteAltLeft className={styles.quoteLeft} />
                   <BiSolidQuoteAltRight className={styles.quoteRight} />
@@ -177,7 +177,7 @@ const Testimonial = () => {
                   <h4>Rajesh Mehra</h4>
                   <span>Founder</span>
                 </div>
-              </SwiperSlide> */}
+              </SwiperSlide>
             </Swiper>
             <div className={styles.navigationWrap}>
               <button
