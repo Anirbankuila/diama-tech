@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --no-lint",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "aos": "^2.3.4",

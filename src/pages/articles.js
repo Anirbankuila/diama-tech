@@ -10,7 +10,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
-import { FaSquareFacebook, FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareFacebook } from "react-icons/fa6";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import "swiper/css";
@@ -263,7 +263,6 @@ export default function Service() {
             <div className="col-lg-3">
               <div className={styles.blogRightImg}>
                 <img
-                
                   src={`/images/blogImg.png`}
                   alt={"tab"}
                   className="img-fluid rounded"
@@ -273,17 +272,21 @@ export default function Service() {
                 <p>Share with your community!</p>
                 <ul>
                   <li>
-                    <Link href={"#"}>
+                    <Link href={"https://www.facebook.com/share/16GP12BVLf"}>
                       <FaSquareFacebook />
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"#"}>
                       <FaSquareXTwitter />
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
-                    <Link href={"#"}>
+                    <Link
+                      href={
+                        "https://www.linkedin.com/company/diamatechnologies/"
+                      }
+                    >
                       {" "}
                       <TbBrandLinkedinFilled />
                     </Link>
@@ -384,7 +387,11 @@ export default function Service() {
         <div className="container">
           <div className={styles.subscribeWrap}>
             <div className={styles.subscribeWrapImg}>
-              <img src={"/images/nask-group.png"} alt="subscribe img"  data-aos="fade-up"/>
+              <img
+                src={"/images/nask-group.png"}
+                alt="subscribe img"
+                data-aos="fade-up"
+              />
             </div>
             <div className={styles.subscribeWrapContent} data-aos="fade-up">
               <Heading mainText={"Subscribe to our newsletter"} />
