@@ -7,12 +7,12 @@ import MultiStepModal from "@/component/MultiStepModal/MultiStepModal";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import Testimonial from "@/component/Testimonial/Testimonial";
 import styles from "@/styles/ui-ux.module.css";
-import { ServicesData } from "@/utils/constantData";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import { useState } from "react";
+import Link from "next/link";
+import { useRef, useState } from "react";
 import { Form } from "react-bootstrap";
+import { HiOutlineArrowSmRight } from "react-icons/hi";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -23,107 +23,42 @@ const interSans = Inter({
 });
 
 export default function Service() {
+  const swiperRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-  const router = useRouter();
-  const { category } = router.query;
-  const service = ServicesData[category];
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    email: "",
-    website: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    alert("Form submitted!");
-    const dataToSend = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      phoneNumber: formData.phoneNumber,
-      website: formData.website,
-      emailAddress: formData.email,
-      message: formData.message,
-    };
-
-    try {
-      const res = await fetch("/api/consultation", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(dataToSend),
-      });
-
-      if (res.ok) {
-        alert("Consultation submitted successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          email: "",
-          website: "",
-          message: "",
-        });
-      } else {
-        const result = await res.json();
-        alert(`Error: ${result.message}`);
-      }
-    } catch (error) {
-      console.error("Submit Error:", error);
-      alert("Something went wrong");
-    }
-  };
-
-  if (!service) {
-    return (
-      <div style={{ padding: "50px", textAlign: "center" }}>
-        <h1>Service Not Found</h1>
-        <p>The category &quot;{category}&quot; does not exist.</p>
-      </div>
-    );
-  }
   return (
     <>
       <Head>
-        <title>{service.title} | Diama Technologies</title>
-        {/* <meta
+        <title>DIAMA Technologies | UI/UX Design Services</title>
+        <meta
           name="description"
           content="Transform your digital products with DIAMA Technologies' expert UI/UX design services."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       {/* ======Banner======= */}
       <section
         className={styles.mainBanner}
-        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
           <div className={styles.bannerContent}>
             <div className={styles.bannerLeftContent}>
               <Subtitle text={"Innovating Beyond Limits"} />
-              <h1>{service.description}</h1>
-              {/* <h1>
+              <h1>
                 Crafting seamless experiences that captivate users and{" "}
                 <span> grow your business. </span>
-              </h1> */}
-              <CommonButton text="Talk to Our Team" href="/contact" />
+              </h1>
+              <CommonButton
+                text="Talk to Our Team"
+                href="#"
+                className=""
+                onClick={openModal} // Handle open modal here
+              />
             </div>
           </div>
         </div>
@@ -133,36 +68,71 @@ export default function Service() {
       {/* ======Hire us====== */}
       <section className={styles.hireUs}>
         <div className="container">
-          <div className={styles.hireUsContent} data-aos="fade-up">
-            <Heading mainText={service.hireUs.heading} />
-            <p>{service.hireUs.description}</p>
+          <div className={styles.hireUsContent}>
+            <Heading mainText={"Hire Expert UX/UI Designers"} />
+            <p>
+              Turn your ideas into reality with our high-end design solutions.
+              We help businesses enhance performance through interactive
+              prototypes that deliver exceptional user experiences. Our team
+              transforms your concepts into highly functional and engaging
+              designs, ensuring your brand stands out.
+            </p>
           </div>
           <div className={styles.whyUs}>
             <div className="row">
               <div className="col-lg-7">
-                <div className={styles.whyUsContent} data-aos="fade-right">
-                  <h4>Why Choose Our {service.title}?</h4>
+                <div className={styles.whyUsContent}>
+                  <h4>Why Choose Our UX/UI Services?</h4>
                   <div className={styles.whyUsList}>
-                    {service?.hireUs.whyUs?.map((reason, index) => {
-                      return (
-                        <div className={styles.whyUsItem} key={index}>
-                          <h2>{reason.number}</h2>
-                          <div className={styles.whyUsText}>
-                            <h5>{reason.title}</h5>
-                            <p>{reason.description}</p>
-                          </div>
-                        </div>
-                      );
-                    })}
+                    <div className={styles.whyUsItem}>
+                      <h2>01</h2>
+                      <div className={styles.whyUsText}>
+                        <h5>Integrated Approach</h5>
+                        <p>
+                          Our designers combine creativity and strategy to
+                          deliver holistic solutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.whyUsItem}>
+                      <h2>02</h2>
+                      <div className={styles.whyUsText}>
+                        <h5>Expert Execution</h5>
+                        <p>
+                          Industry-leading experts craft intuitive and engaging
+                          user experiences.
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.whyUsItem}>
+                      <h2>03</h2>
+                      <div className={styles.whyUsText}>
+                        <h5>Integrated Approach</h5>
+                        <p>
+                          Our designers combine creativity and strategy to
+                          deliver holistic solutions.
+                        </p>
+                      </div>
+                    </div>
+                    <div className={styles.whyUsItem}>
+                      <h2>04</h2>
+                      <div className={styles.whyUsText}>
+                        <h5>Integrated Approach</h5>
+                        <p>
+                          Our designers combine creativity and strategy to
+                          deliver holistic solutions.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className={styles.whyUsImg} data-aos="zoom-in">
-                    <img src={service?.hireUs?.image} alt="whyUs" />
+                  <div className={styles.whyUsImg}>
+                    <img src="/images/ui-services.png" alt="whyUs" />
                   </div>
                 </div>
               </div>
-              <div className="col-lg-5" data-aos="fade-left">
+              <div className="col-lg-5">
                 <div className={styles.letsTalk}>
-                  <Form onSubmit={handleSubmit}>
+                  <Form>
                     <h4>Schedule a Free Consultation</h4>
                     <div className="row">
                       <div className="col-lg-6">
@@ -175,10 +145,6 @@ export default function Service() {
                             className={styles.eachInput}
                             type="text"
                             placeholder="First Name"
-                            name="firstName"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            required
                           />
                         </Form.Group>
                       </div>
@@ -191,11 +157,7 @@ export default function Service() {
                           <Form.Control
                             className={styles.eachInput}
                             type="text"
-                            name="lastName"
                             placeholder="Last Name"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            required
                           />
                         </Form.Group>
                       </div>
@@ -209,9 +171,6 @@ export default function Service() {
                             className={styles.eachInput}
                             type="text"
                             placeholder="Phone Number"
-                            name="phoneNumber"
-                            value={formData.phoneNumber}
-                            onChange={handleChange}
                           />
                         </Form.Group>
                       </div>
@@ -224,11 +183,7 @@ export default function Service() {
                           <Form.Control
                             className={styles.eachInput}
                             type="email"
-                            name="email"
                             placeholder="Email Address"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
                           />
                         </Form.Group>
                       </div>
@@ -241,10 +196,7 @@ export default function Service() {
                       <Form.Control
                         className={styles.eachInput}
                         type="text"
-                        name="website"
                         placeholder="Website"
-                        value={formData.website}
-                        onChange={handleChange}
                       />
                     </Form.Group>
                     <Form.Group
@@ -256,17 +208,15 @@ export default function Service() {
                         className={styles.eachInput}
                         as="textarea"
                         rows={4}
-                        name="message"
                         placeholder="Leave us message..."
-                        value={formData.message}
-                        onChange={handleChange}
                       />
+                      {/* <Form.TextArea rows={4} placeholder="Leave us message..." /> */}
                     </Form.Group>
                     <p>
                       Disclaimer: By submitting this form, you agree to be
                       contacted by Diama Technologies. You may opt out anytime.
                     </p>
-                    <CommonButton href="#" text="Submit" btnType="submit" />
+                    <CommonButton text="Submit" href="/" />
                   </Form>
                 </div>
               </div>
@@ -293,17 +243,77 @@ export default function Service() {
             <Heading mainText={"How UI/UX Services Help Your Business"} />
           </div>
           <div className={`row ${styles.servicesRow}`}>
-            {service?.benefits?.map((benefit, index) => {
-              return (
-                <div className="col-lg-4 mb-4" key={index} data-aos="fade-up">
-                  <div className={styles.serviceItem}>
-                    <span data-text={index + 1}>{benefit.number}</span>
-                    <h5>{benefit.title}</h5>
-                    <p>{benefit.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="1">1</span>
+                <h5>Understand Your Users</h5>
+                <p>
+                  Every successful product starts with knowing the audience.
+                  Through research, surveys, and usability studies, UI/UX design
+                  helps you identify user needs, behaviors, and pain points.
+                  This ensures your product is built for the right people.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="2">2</span>
+                <h5>Build Intuitive Interfaces</h5>
+                <p>
+                  Complexity turns users away. A well-structured interface with
+                  clear navigation, readable layouts, and logical design
+                  elements makes it easy for users to explore your website or
+                  app without confusion.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="3">3</span>
+                <h5>Enhance Engagement</h5>
+                <p>
+                  Engagement is the key to retention. Interactive features,
+                  smooth animations, and visually appealing elements make your
+                  platform more enjoyable, encouraging users to spend more time
+                  and return often.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="4">4</span>
+                <h5>Boost Conversions</h5>
+                <p>
+                  Good design is directly linked to business growth. By
+                  simplifying checkout flows, optimizing call-to-actions, and
+                  reducing friction in the user journey, UI/UX design increases
+                  conversions and revenue.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="5">5</span>
+                <h5>Strengthen Brand Value</h5>
+                <p>
+                  Your digital presence reflects your brand. A consistent design
+                  language — colors, typography, and style — builds trust and
+                  recognition, making your brand memorable and reliable.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.serviceItem}>
+                <span data-text="6">6</span>
+                <h5>Scale with Confidence</h5>
+                <p>
+                  UI/UX design reduces costly mistakes by testing ideas early
+                  through prototypes and usability sessions. This ensures
+                  products are scalable, reliable, and future-ready, saving both
+                  time and money in development.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -317,17 +327,17 @@ export default function Service() {
       </div>
 
       {/* ========driving force======= */}
-      <section className={styles.drivingForce} data-aos="fade-up">
+      <section className={styles.drivingForce}>
         <div className="container">
           <div className={styles.drivingForceContent}>
             <Heading
               mainText={"TMeet the Driving Force Behind Our Success: "}
               highlightText={"Our Exceptional Team"}
             />
-            <div className={styles.drivingForceImg} data-aos="zoom-in">
+            <div className={styles.drivingForceImg}>
               <img src="/images/drivingForce.png" alt="drivingForce" />
             </div>
-            <div className={styles.teamText} data-aos="fade-up">
+            <div className={styles.teamText}>
               <p>
                 At <strong>Diama Technologies</strong>, our team is more than
                 just a group of professionals — they are the visionaries,

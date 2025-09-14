@@ -6,7 +6,17 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { name, email, projectDescription } = req.body;
+  const {
+    name,
+    email,
+    phone,
+    message,
+    categories,
+    projectDescription,
+    technologies,
+    budget,
+    timeline,
+  } = req.body;
 
   if (!name || !email || !projectDescription) {
     return res.status(400).json({ message: "Missing fields" });
@@ -17,8 +27,16 @@ export default async function handler(req, res) {
     const newQuotation = new ProjectQuotation({
       name,
       email,
+      phone: phone || "",
+      message: message || "",
+      categories: Array.isArray(categories) ? categories : [],
       projectDescription,
+      technologies: Array.isArray(technologies) ? technologies : [],
+      budget: budget || "",
+      timeline: timeline || "",
+      createdAt: new Date(),
     });
+
     await newQuotation.save();
 
     // Send email to support

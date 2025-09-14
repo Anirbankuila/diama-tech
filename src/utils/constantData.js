@@ -622,7 +622,7 @@ export const ServicesListData = [
     title: "Digital Marketing",
     description:
       "Crafting data-driven, creative marketing strategies that connect businesses with their audience, boost visibility, and drive sustainable growth.",
-    image: "/images/ui-ux.png",
+    image: "/images/dm.png",
   },
   {
     category: "ui-ux-design",
@@ -636,27 +636,27 @@ export const ServicesListData = [
     title: "Graphic Design",
     description:
       "Creating impactful and aesthetically engaging designs that communicate your brand’s message clearly and leave a lasting impression.",
-    image: "/images/ui-ux.png",
+    image: "/images/graphics.png",
   },
   {
     category: "web-design",
     title: "Web Design & Development",
     description:
       "Building responsive, fast, and visually appealing websites that offer seamless navigation and deliver an exceptional user experience across devices.",
-    image: "/images/ui-ux.png",
+    image: "/images/webdev.jpg",
   },
   {
     category: "app-development",
     title: "App Development",
     description:
       "Developing scalable and user-centric applications that streamline processes, enhance engagement, and provide innovative solutions tailored to business needs.",
-    image: "/images/ui-ux.png",
+    image: "/images/mobiledev.jpg",
   },
   {
     category: "devops",
     title: "DevOps",
     description:
       "Implementing efficient, automated workflows that improve software delivery, ensure system reliability, and accelerate innovation while reducing downtime.",
-    image: "/images/ui-ux.png",
+    image: "/images/devops.png",
   },
 ];

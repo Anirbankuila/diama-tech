@@ -38,7 +38,7 @@ const StatCircle = ({ endValue, suffix = "", lines = [] }) => {
   };
 
   return (
-    <div className={styles.statCircle} ref={ref}>
+    <div className={styles.statCircle} ref={ref} data-aos="zoom-in">
       <div className={styles.statNumber}>
         {formatNumber(count)}
         {suffix}

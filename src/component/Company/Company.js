@@ -4,7 +4,7 @@ import styles from "./Company.module.css";
 
 export const Company = () => {
   return (
-    <div className={styles.companies}>
+    <div className={styles.companies} data-aos="fade-up">
       <div className="container">
         <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
         <div className={styles.companyWrap}>

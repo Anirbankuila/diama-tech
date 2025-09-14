@@ -5,6 +5,7 @@ import Heading from "@/component/Heading/Heading";
 import Subtitle from "@/component/Subtitle/Subtitlle";
 import styles from "@/styles/Contact.module.css";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -64,6 +65,7 @@ export default function Contact() {
       <Header />
       <section
         className={styles.mainBanner}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
@@ -88,7 +90,7 @@ export default function Contact() {
         <div className="container">
           <div className={styles.contactContent}>
             {/* Left: Form */}
-            <div className={styles.formWrapper}>
+            <div className={styles.formWrapper} data-aos="fade-right">
               <div className={styles.formWrapperHeading}>
                 <h2>Let’s chat, Reach Out to Us</h2>
                 <p>
@@ -190,7 +192,7 @@ export default function Contact() {
                 </div>
               </div>
             </div> */}
-            <div className={styles.infoWrapper}>
+            <div className={styles.infoWrapper} data-aos="fade-left">
               <div className={styles.contactImage}>
                 <img
                   src="/images/contact page banner.png"
@@ -205,7 +207,9 @@ export default function Contact() {
                   </div>
                   <div className={styles.textWrapper}>
                     <span>Email</span>
-                    <p>mm@diamatechnologies.com</p>
+                    <Link href={"mailto:mm@diamatechnologies.com"}>
+                      mm@diamatechnologies.com
+                    </Link>
                   </div>
                 </div>
 
@@ -215,7 +219,7 @@ export default function Contact() {
                   </div>
                   <div className={styles.textWrapper}>
                     <span>Phone Number</span>
-                    <p>+91 98747 07665</p>
+                    <Link href={"tel:+919874707665"}>+91 98747 07665</Link>
                   </div>
                 </div>
               </div>
@@ -223,7 +227,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <section className={styles.locationSection}>
+      <section className={styles.locationSection} data-aos="fade-up">
         <div className="container">
           <div className={styles.sectionHeader}>
             <Subtitle text={"Come say hello!"} />
@@ -234,14 +238,24 @@ export default function Contact() {
             />
           </div>
 
-          <div className={styles.mapWrapper}>
-            <img src="/images/come-say-hello.png" alt="come say hello" />
+          <div className={styles.mapWrapper} data-aos="zoom-in">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58528.23017704183!2d87.30707363380833!3d23.53198498298426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s46%2C%20Rabindra%20Nagar%20Market%2C%20Durgapur-713206!5e0!3m2!1sen!2sin!4v1757833190161!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style={styles.map}
+              allowfullscreen=""
+              loading="lazy"
+              
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </section>
 
       {/*Showcase Section */}
       <section
+        data-aos="fade-up"
         className={styles.buildTogether}
         style={{ backgroundImage: "url(/images/buildBg.png)" }}
       >

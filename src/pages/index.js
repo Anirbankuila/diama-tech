@@ -16,13 +16,21 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const interSans = Inter({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -53,7 +61,7 @@ export default function Home() {
                   Your digital journey from <br />
                   <span> Utopia to Eutopia</span>
                 </h1>
-                <CommonButton text="Our Services" href="/service" />
+                <CommonButton text="Schedule a Meeting" href="/service" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/Connect-the-Dots.jpg"} alt="banner image" />
@@ -70,7 +78,7 @@ export default function Home() {
                     strategy,technology & creativity in perfect harmony.
                   </span>
                 </h1>
-                <CommonButton text="Our Services" href="/service" />
+                <CommonButton text="Schedule a Meeting" href="/service" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/banner-image.png"} alt="banner image" />
@@ -87,7 +95,7 @@ export default function Home() {
                   We are a digital startup for
                   <span> Startups and SMBs</span>
                 </h1>
-                <CommonButton text="Our Services" href="/services" />
+                <CommonButton text="Schedule a Meeting" href="/services" />
               </div>
               <div className={styles.bannerImage}>
                 <img src={"/images/banner-3.png"} alt="banner image" />
@@ -104,13 +112,13 @@ export default function Home() {
       </section>
 
       {/* ========Companies======= */}
-      <section className={styles.companies}>
+      <section className={styles.companies} data-aos="fade-up">
         <div className={styles.clientShape}>
           <img src={"/images/client_shape.png"} alt="shape" />
         </div>
         <div className="container">
           <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
-          <div className={styles.companyWrap}>
+          <div className={styles.companyWrap} >
             <ul>
               <li>
                 <img src={"/images/segement.png"} alt="segemnt" />
@@ -154,12 +162,12 @@ export default function Home() {
         </div>
         <div className="container">
           <div className={`${styles.row} row`}>
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-right">
               <div className={styles.visionImage}>
                 <img src={"/images/vision.png"} alt="vision" />
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-left">
               <div className={styles.visionContent}>
                 <Subtitle text={"Our Vison"} />
                 <p>
@@ -188,12 +196,12 @@ export default function Home() {
             </div>
           </div>
           <div className={`${styles.row} row`}>
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-right">
               <div className={styles.visionImage}>
                 <img src={"/images/mission.png"} alt="vision" />
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6" data-aos="fade-left">
               <div className={styles.visionContent}>
                 <Subtitle text={"Our Mission"} />
                 <p>
