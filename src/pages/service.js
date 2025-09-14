@@ -1,4 +1,5 @@
 import CommonButton from "@/component/CommonBtn/CommonBtn";
+import { Company } from "@/component/Company/Company";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
@@ -37,7 +38,7 @@ export default function Service() {
       >
         <div className="container">
           <div className={styles.bannerContent}>
-            <div className={styles.bannerLeftContent}>
+            <div className={styles.bannerLeftContent } data-aos="fade-right">
               <Subtitle text={"Innovating Beyond Limits"} />
               <h1>
                 Crafting Experiences That <span> Make an Impact</span>
@@ -45,7 +46,7 @@ export default function Service() {
               <CommonButton text="Start Your Project" href="#" onClick={openModal}/>
             </div>
 
-            <div className={styles.bannerRightContent}>
+            <div className={styles.bannerRightContent} data-aos="fade-left">
               <p>
                 Interior design is the art of science of enhancing the interior
                 of a building to achieve a healthier and more aesthetically
@@ -58,7 +59,7 @@ export default function Service() {
       </section>
 
       {/* ======technology====== */}
-      <section className={styles.techWeUse}>
+      <section className={styles.techWeUse} data-aos="fade-up">
         <div className="container">
           <div className={styles.topHeader}>
             <h3>Technologies we use</h3>
@@ -69,7 +70,7 @@ export default function Service() {
               efficiency, innovation, and growth in your organization.
             </p>
           </div>
-          <div className={styles.techImg}>
+          <div className={styles.techImg} data-aos="zoom-in">
             <img src={"/images/techImg.png"} alt="tech img" />
             <p>
               Disclaimer: The tools and software listed here are third-party
@@ -104,7 +105,7 @@ export default function Service() {
           className={styles.serviceFirstShape4}
         />
         <div className="container">
-          <div className={styles.topHeader}>
+          <div className={styles.topHeader} data-aos="fade-up">
             <Heading
               className={styles.serviceHeading}
               mainText={"Shaping Identities That Truly Stand Out"}
@@ -116,7 +117,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceContent}>
                   <h4>Product Design & UX/UI Solutions</h4>
                   <p>
@@ -133,7 +134,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceImg}>
                   <img src={"/images/uiux.png"} alt="UI UX" />
                 </div>
@@ -142,7 +143,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceContent}>
                   <h4>Graphic Design</h4>
                   <p>
@@ -159,7 +160,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceImg}>
                   <img src={"/images/graphics.png"} alt="UI UX" />
                 </div>
@@ -168,7 +169,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceContent}>
                   <h4>Digital Marketing</h4>
                   <p>
@@ -184,7 +185,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceImg}>
                   <img src={"/images/dm.png"} alt="UI UX" />
                 </div>
@@ -193,7 +194,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceContent}>
                   <h4>App Development</h4>
                   <p>
@@ -210,7 +211,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceImg}>
                   <img src={"/images/app.png"} alt="UI UX" />
                 </div>
@@ -219,7 +220,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceContent}>
                   <h4>Web Design & Development</h4>
                   <p>
@@ -235,7 +236,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceImg}>
                   <img src={"/images/web.png"} alt="UI UX" />
                 </div>
@@ -244,7 +245,7 @@ export default function Service() {
           </div>
           <div className={styles.eachService}>
             <div className={`row align-items-center ${styles.serviceRow}`}>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-left">
                 <div className={styles.serviceContent}>
                   <h4>DevOps</h4>
                   <p>
@@ -259,7 +260,7 @@ export default function Service() {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6" data-aos="fade-right">
                 <div className={styles.serviceImg}>
                   <img src={"/images/devops.png"} alt="UI UX" />
                 </div>
@@ -270,46 +271,12 @@ export default function Service() {
       </section>
 
       {/* ========Companies======= */}
-      <section className={styles.companies}>
-        <div className="container">
-          <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
-          <div className={styles.companyWrap}>
-            <ul>
-              <li>
-                <img src={"/images/segement.png"} alt="segemnt" />
-              </li>
-              <li>
-                <img src={"/images/asana.png"} alt="asana" />
-              </li>
-              <li>
-                <img src={"/images/intercom.png"} alt="intercom" />
-              </li>
-              <li>
-                <img src={"/images/zenefits.png"} alt="zenefits" />
-              </li>
-              <li>
-                <img src={"/images/greenhouse.png"} alt="greenhouse" />
-              </li>
-              <li>
-                <img src={"/images/chargebee.png"} alt="chargebee" />
-              </li>
-              <li>
-                <img src={"/images/lattice.png"} alt="lattice" />
-              </li>
-              <li>
-                <img src={"/images/frame.png"} alt="frame" />
-              </li>
-              <li>
-                <img src={"/images/mutiny.png"} alt="mutiny" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <Company />
 
       {/* ========build====== */}
       <section
         className={styles.buildTogether}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/buildBg.png)" }}
       >
         <img

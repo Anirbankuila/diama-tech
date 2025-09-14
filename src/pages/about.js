@@ -32,7 +32,7 @@ export default function About() {
       >
         <div className="container">
           {/* Left Text Content */}
-          <div className={styles.textBlock}>
+          <div className={styles.textBlock} data-aos="fade-up">
             <div className={styles.leftItem}>
               <Subtitle text={"About Us"} />
               <h1>
@@ -72,7 +72,7 @@ export default function About() {
           </div>
 
           {/* Right Image + Circle */}
-          <div className={styles.imageBlock}>
+          <div className={styles.imageBlock} data-aos="fade-up">
             <div className={styles.subBlock}>
               <h3 className={styles.subHeading}>SmartPlatform Integration</h3>
               <p className={styles.subText}>
@@ -82,6 +82,7 @@ export default function About() {
               </p>
             </div>
             <img
+              data-aos="zoom-in"
               src="/images/team-collaboration.png"
               alt="Team Collaboration"
               className={styles.mainImage}
@@ -94,12 +95,12 @@ export default function About() {
         <div className="container">
           <div className={styles.solutionWrapper}>
             {/* Left Image */}
-            <div className={styles.leftImage}>
+            <div className={styles.leftImage} data-aos="fade-right">
               <img src="/images/office-building.png" alt="Office Building" />
             </div>
 
             {/* Middle Content */}
-            <div className={styles.content}>
+            <div className={styles.content} data-aos="fade-left">
               <Subtitle text={"Not Just a Company, A Mindset"} />
               <Heading
                 mainText={"Turning imagination into"}
@@ -150,7 +151,7 @@ export default function About() {
             {/* Column 1 */}
             <div className={styles.column}>
               {/* <div className={styles.statNumber}>100+</div> */}
-              <StatCircle
+              <StatCircle 
                 endValue={100}
                 suffix="+"
                 lines={["Satisfied", "Clients"]}
@@ -162,7 +163,7 @@ export default function About() {
                 </p>
                 <h2>We are here to help any stage</h2>
               </div>
-              <div className={styles.stageCard}>
+              <div className={styles.stageCard} data-aos="fade-up">
                 <div className={styles.stageHeader}>
                   <h4>Early Stage</h4>
                 </div>
@@ -181,7 +182,7 @@ export default function About() {
                 lines={["Successful", "Projects Delivered"]}
               />
 
-              <div className={styles.stageCard}>
+              <div className={styles.stageCard} data-aos="fade-up">
                 <div className={styles.stageHeader}>
                   <h4>Growth Stage</h4>
                 </div>
@@ -197,8 +198,12 @@ export default function About() {
 
             {/* Column 3 */}
             <div className={styles.column}>
-              <StatCircle endValue={10} suffix="+" lines={['Ongoing', 'Projects']} />
-              <div className={styles.stageCard}>
+              <StatCircle
+                endValue={10}
+                suffix="+"
+                lines={["Ongoing", "Projects"]}
+              />
+              <div className={styles.stageCard} data-aos="fade-up">
                 <div className={styles.stageHeader}>
                   <h4>Advance Stage</h4>
                 </div>
@@ -214,8 +219,12 @@ export default function About() {
 
             {/* Column 4 */}
             <div className={styles.column}>
-              <StatCircle endValue={2} suffix="" lines={['Awards', 'achievement']} />
-              <div className={styles.stageCard}>
+              <StatCircle
+                endValue={2}
+                suffix=""
+                lines={["Awards", "achievement"]}
+              />
+              <div className={styles.stageCard} data-aos="fade-up">
                 <div className={styles.stageHeader}>
                   <h4>Final Stage</h4>
                 </div>

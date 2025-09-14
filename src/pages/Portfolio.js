@@ -50,6 +50,7 @@ export default function Portfolio() {
       <Header />
       <section
         className={styles.mainBanner}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
@@ -73,7 +74,7 @@ export default function Portfolio() {
       <section className={styles.showcaseSection}>
         <div className="container">
           {projects.map((project) => (
-            <div key={project.id} className={styles.showcaseWrapper}>
+            <div key={project.id} className={styles.showcaseWrapper} data-aos="fade-up">
               {/* Project Preview */}
               <img src={project.image} alt={project.title} />
 
@@ -100,6 +101,7 @@ export default function Portfolio() {
       <Company />
       <section
         className={styles.buildTogether}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/buildBg.png)" }}
       >
         <img

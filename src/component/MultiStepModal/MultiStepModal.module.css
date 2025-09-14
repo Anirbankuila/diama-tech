@@ -5,21 +5,25 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    /* Allow scrolling if content overflows */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    padding: 20px;
+    z-index: 9999;
 }
 
 .modalContent {
-    background: white;
+    background: #fff;
     border-radius: 40px;
-    width: 1240px;
+    width: 90%;
     max-width: 90%;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
+    max-height: 90vh;
+    /* padding: 20px; */
+    overflow-y: auto;
 }
+
 
 .stepContent {
     position: relative;
@@ -100,13 +104,15 @@
     align-items: center;
     gap: 5px;
 }
-.removeButton{
+
+.removeButton {
     cursor: pointer;
     font-size: 16px;
     vertical-align: middle;
     border: none;
     background: transparent;
 }
+
 .selectCat ul li:hover {
     background: #FFE38C;
     border: 1px solid #FFE38C;
@@ -125,12 +131,14 @@
     box-sizing: border-box;
     color: #262B35;
 }
-.selectCatWrap{
+
+.selectCatWrap {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.addButton{
+
+.addButton {
     background: #EFEFEF;
     padding: 13px 18px;
     border: 1px solid #262B35;
@@ -141,11 +149,13 @@
     font-weight: 500;
     transition: all 0.3s ease;
 }
+
 .addButton:hover {
     background: #FFE38C;
     border: 1px solid #FFE38C;
     color: #262B35;
 }
+
 .dropdown {
     position: absolute;
     top: 100%;
@@ -158,35 +168,43 @@
     background: #fff;
     border-radius: 20px;
     z-index: 1;
-    
+
 }
+
 .dropdown::-webkit-scrollbar {
     width: 15px;
 }
 
 .dropdown::-webkit-scrollbar-track {
-    background: #fff; /* Track color */
+    background: #fff;
+    /* Track color */
     border-radius: 10px;
 }
 
 .dropdown::-webkit-scrollbar-thumb {
-    background-color: #f8b018; /* Scroll thumb color */
+    background-color: #f8b018;
+    /* Scroll thumb color */
     border-radius: 10px;
-    border: 5px solid #fff; /* Optional: adds space around thumb */
+    border: 5px solid #fff;
+    /* Optional: adds space around thumb */
 }
 
 .dropdown::-webkit-scrollbar-thumb:hover {
-    background-color: #e09b00; /* Hover effect */
+    background-color: #e09b00;
+    /* Hover effect */
 }
+
 .dropdownItem {
     padding: 10px 15px;
     cursor: pointer;
     border-bottom: 1px solid #EFEFEF;
 }
-.dropdownItem:hover{
+
+.dropdownItem:hover {
     background: #FFE38C;
     border: 1px solid #FFE38C;
 }
+
 .selectCat .selectedList li {
     background: #FFE38C;
     border: 1px solid #FFE38C;
@@ -197,7 +215,7 @@
     top: 20px;
     right: 20px;
     width: 40px;
-    height:40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,13 +227,16 @@
     z-index: 1;
     padding: 0;
 }
-.modalBackdrop .closeButton svg{
+
+.modalBackdrop .closeButton svg {
     font-size: 18px;
     color: #141211;
 }
+
 .modalBackdrop .closeButton:hover {
     background: #F8B018;
 }
+
 .buttonGroup {
     display: flex;
     justify-content: space-between;

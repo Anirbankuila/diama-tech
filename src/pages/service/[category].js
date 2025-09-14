@@ -111,6 +111,7 @@ export default function Service() {
       {/* ======Banner======= */}
       <section
         className={styles.mainBanner}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
@@ -132,14 +133,14 @@ export default function Service() {
       {/* ======Hire us====== */}
       <section className={styles.hireUs}>
         <div className="container">
-          <div className={styles.hireUsContent}>
+          <div className={styles.hireUsContent} data-aos="fade-up">
             <Heading mainText={service.hireUs.heading} />
             <p>{service.hireUs.description}</p>
           </div>
           <div className={styles.whyUs}>
             <div className="row">
               <div className="col-lg-7">
-                <div className={styles.whyUsContent}>
+                <div className={styles.whyUsContent} data-aos="fade-right">
                   <h4>Why Choose Our {service.title}?</h4>
                   <div className={styles.whyUsList}>
                     {service?.hireUs.whyUs?.map((reason, index) => {
@@ -154,12 +155,12 @@ export default function Service() {
                       );
                     })}
                   </div>
-                  <div className={styles.whyUsImg}>
+                  <div className={styles.whyUsImg} data-aos="zoom-in">
                     <img src={service?.hireUs?.image} alt="whyUs" />
                   </div>
                 </div>
               </div>
-              <div className="col-lg-5">
+              <div className="col-lg-5" data-aos="fade-left">
                 <div className={styles.letsTalk}>
                   <Form onSubmit={handleSubmit}>
                     <h4>Schedule a Free Consultation</h4>
@@ -294,9 +295,9 @@ export default function Service() {
           <div className={`row ${styles.servicesRow}`}>
             {service?.benefits?.map((benefit, index) => {
               return (
-                <div className="col-lg-4 mb-4" key={index}>
+                <div className="col-lg-4 mb-4" key={index} data-aos="fade-up">
                   <div className={styles.serviceItem}>
-                    <span data-text="1">{benefit.number}</span>
+                    <span data-text={index + 1}>{benefit.number}</span>
                     <h5>{benefit.title}</h5>
                     <p>{benefit.description}</p>
                   </div>
@@ -316,17 +317,17 @@ export default function Service() {
       </div>
 
       {/* ========driving force======= */}
-      <section className={styles.drivingForce}>
+      <section className={styles.drivingForce} data-aos="fade-up">
         <div className="container">
           <div className={styles.drivingForceContent}>
             <Heading
               mainText={"TMeet the Driving Force Behind Our Success: "}
               highlightText={"Our Exceptional Team"}
             />
-            <div className={styles.drivingForceImg}>
+            <div className={styles.drivingForceImg} data-aos="zoom-in">
               <img src="/images/drivingForce.png" alt="drivingForce" />
             </div>
-            <div className={styles.teamText}>
+            <div className={styles.teamText} data-aos="fade-up">
               <p>
                 At <strong>Diama Technologies</strong>, our team is more than
                 just a group of professionals — they are the visionaries,

@@ -1,3 +1,4 @@
+import { Company } from "@/component/Company/Company";
 import Footer from "@/component/Footer/Footer";
 import Header from "@/component/Header/Header";
 import Heading from "@/component/Heading/Heading";
@@ -93,6 +94,7 @@ export default function Service() {
       {/* ======Banner======= */}
       <section
         className={styles.mainBanner}
+        data-aos="fade-up"
         style={{ backgroundImage: "url(/images/bannerBg.png)" }}
       >
         <div className="container">
@@ -151,7 +153,7 @@ export default function Service() {
                   >
                     <div className="row align-items-start">
                       {/* Left Image Section */}
-                      <div className="col-lg-7">
+                      <div className="col-lg-7" data-aos="fade-right">
                         <div className={styles.blogImg}>
                           <img
                             src={
@@ -165,7 +167,7 @@ export default function Service() {
                       </div>
 
                       {/* Right Blog List */}
-                      <div className="col-lg-5">
+                      <div className="col-lg-5" data-aos="fade-left">
                         <div className={styles.blogList}>
                           {currentContent?.articles.map((article, idx) => (
                             <div key={idx} className={styles.blogItem}>
@@ -188,6 +190,7 @@ export default function Service() {
       <section
         className={styles.otherBlog}
         style={{ backgroundImage: "url('/images/subscribeBg.png')" }}
+        data-aos="fade-up"
       >
         <div className="container">
           <div className={styles.blogHeading}>
@@ -197,7 +200,7 @@ export default function Service() {
           <div className="row">
             <div className="col-lg-9">
               <div className={styles.blogContent}>
-                <div className={styles.EachBlogContent}>
+                <div className={styles.EachBlogContent} data-aos="fade-up">
                   <h5>Exploring Generative AI in Content Creation</h5>
                   <p>
                     Hello there! As a marketing manager in the SaaS industry,
@@ -228,7 +231,7 @@ export default function Service() {
                     fun learning journey!
                   </p>
                 </div>
-                <div className={styles.EachBlogContent}>
+                <div className={styles.EachBlogContent} data-aos="fade-up">
                   <h5>Steering Clear of Common AI Writing Pitfalls</h5>
                   <p>
                     Jumping headfirst into using AI, like ChatGPT, without a
@@ -260,6 +263,7 @@ export default function Service() {
             <div className="col-lg-3">
               <div className={styles.blogRightImg}>
                 <img
+                
                   src={`/images/blogImg.png`}
                   alt={"tab"}
                   className="img-fluid rounded"
@@ -380,9 +384,9 @@ export default function Service() {
         <div className="container">
           <div className={styles.subscribeWrap}>
             <div className={styles.subscribeWrapImg}>
-              <img src={"/images/nask-group.png"} alt="subscribe img" />
+              <img src={"/images/nask-group.png"} alt="subscribe img"  data-aos="fade-up"/>
             </div>
-            <div className={styles.subscribeWrapContent}>
+            <div className={styles.subscribeWrapContent} data-aos="fade-up">
               <Heading mainText={"Subscribe to our newsletter"} />
               <p>
                 From the very first sketch to the final launch, our team at
@@ -409,42 +413,7 @@ export default function Service() {
       </div>
 
       {/* ========Companies======= */}
-      <section className={styles.companies}>
-        <div className="container">
-          <Subtitle text={"Trusted by over 50,000 companies of all sizes"} />
-          <div className={styles.companyWrap}>
-            <ul>
-              <li>
-                <img src={"/images/segement.png"} alt="segemnt" />
-              </li>
-              <li>
-                <img src={"/images/asana.png"} alt="asana" />
-              </li>
-              <li>
-                <img src={"/images/intercom.png"} alt="intercom" />
-              </li>
-              <li>
-                <img src={"/images/zenefits.png"} alt="zenefits" />
-              </li>
-              <li>
-                <img src={"/images/greenhouse.png"} alt="greenhouse" />
-              </li>
-              <li>
-                <img src={"/images/chargebee.png"} alt="chargebee" />
-              </li>
-              <li>
-                <img src={"/images/lattice.png"} alt="lattice" />
-              </li>
-              <li>
-                <img src={"/images/frame.png"} alt="frame" />
-              </li>
-              <li>
-                <img src={"/images/mutiny.png"} alt="mutiny" />
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <Company />
 
       {/* ------footer-------- */}
       <Footer />

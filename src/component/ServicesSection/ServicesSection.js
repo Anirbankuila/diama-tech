@@ -5,7 +5,7 @@ import Subtitle from "../Subtitle/Subtitlle";
 import CommonButton from "../CommonBtn/CommonBtn";
 export default function ServicesSection() {
   return (
-    <section className={styles.servicesSection}>
+    <section className={styles.servicesSection} data-aos="fade-up">
       <div className="container">
         <div className={styles.header}>
           <Subtitle text={"What We Do Best"} />
@@ -94,7 +94,7 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-          <div className={styles.heroContent}>
+          <div className={styles.heroContent} data-aos="fade-up">
             {/* Top Badge */}
             <Subtitle text={"Turning Bold Ideas into Digital Landmark"} />
             {/* Main Heading */}
@@ -111,7 +111,7 @@ export default function ServicesSection() {
             </p>
 
             <CommonButton text={"Get Started Today"} href="#" />
-            <div className={styles.heroImage}>
+            <div className={styles.heroImage} data-aos="zoom-in">
               <img src="/images/team-meeting.png" alt="Team Meeting" />
             </div>
           </div>
